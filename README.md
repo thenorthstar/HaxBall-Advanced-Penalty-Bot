@@ -25,7 +25,7 @@ https://gyazo.com/99108b62c8229bf3a5e9fdc9dfe4a44f
 
 On this image, you are seeing the elimination of a player by the reason of delaying the time. Also, as you can see on the GIF, there are local and global messages. Local ones are which only one player can see at a certain moment, in their own language, whereas the global ones are which all the players can see in the language of the room. After explaining the room fundamentals and some basic properties, we are moving to the **player** and **room** sections.
 
-# Player
+# _PlayerObject
 
 As in the most of the games, player is the main object of this game as well. So we have uploaded many functionalities to the player for more funny and realistic gaming. Now, let's look at what a player has:
 
@@ -59,7 +59,7 @@ As in the most of the games, player is the main object of this game as well. So 
 * Team (**number**: inherited from **player.team**)
 * Turn; players should be in a queue before kicking the ball, therefore, this property has been added to the player. (**bool**: if true, then player is able to kick the ball, else, either player is not in the red team or not able to kick)
 * Voted IDs; the another important property is this, players may want to vote riotous people in the room (**object**: if the player doesn't vote anyone in the room, when it's empty, ID of the people who he/she voted is pushed respectively if used)
-* Votes given; when a player votes anyone else, this property moves in and the voted player approaches to being banned as the votes given to him increased (**number**: 0 to the half of max player amount for the room, for example: 4 for 8 of max capacity)
+* Votes given; when a player votes anyone else, this property moves in and the voted player approaches to being banned as the votes given to him increased (**number**: 0 to the half of max player amount for the room, for example: 4 for 8 of max capacity) (2.3)
 
 The above are the properties of the player. Also, because of the player is a class, rather than an object, it has a lot of functions for changing that properties.
 
@@ -67,3 +67,28 @@ The above are the properties of the player. Also, because of the player is a cla
 
 ![2 2](https://user-images.githubusercontent.com/68077608/137157682-7a5fb0f9-94d4-4ae9-9135-438e314fb334.PNG)
 
+![2 3](https://user-images.githubusercontent.com/68077608/137159166-58ab437b-56a8-4f08-a32a-4f37f1ab17f2.PNG)
+
+After player's properties, let's move to functions of the player class:
+
+**`activeTurn(player : playerObject) : void`**: Makes the player able to shoot.
+
+**`_getPlayer(id : int) : _playerObject`**: Gets the player informations.
+
+**`_initPlayer(player : playerOject) : void`**: Initialize player properties on join.
+
+**`clearSpeedsInDangerZone(player : playerObject) : void`**: Stops logging the speed of the player into *speedsInDangerZone* property of it and makes it empty.
+
+**`decreaseScore(player : playerObject) : void`**: Decreases the player's score (which you should not confuse with goals). If zero, player becomes kickable by the current champion by vote.
+
+**`findOlderVotes(player : playerObject) : int`**: Finds the player's older votes, that is the amount of the votes given to their older accounts.
+
+**`hasDoubleBlanks(string : string) : bool`**: Checks if the player has multiple blanks in their nickname. For example: **THIS  IS A MULTIPLE  BLANKED  NICKNAME**
+
+**`hasInvalidCharacters(string : string) : bool`**: Checks if the player has invalid characters in their nickname. For example: Chinese characters.
+
+**`hasSlowMode(player : playerObject) : bool`**: Checks if the player spamming or not. If **true**, player must wait for a certain time (default: 5 seconds) to write again.
+
+**`hasTooShortName(length : int, string : string) : bool`**: Checks if the player has a name whose length is shorter than a certain value.
+
+**`increaseBadWordUsage(player : playerObject) : int`**: Increases the bad word usage of the player if any message of the player is profane.
