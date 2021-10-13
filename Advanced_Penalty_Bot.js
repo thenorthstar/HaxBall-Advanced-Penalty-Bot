@@ -1935,3 +1935,5 @@ room.onTeamGoal = _roomObject.onTeamGoal;
 room.onTeamVictory = _roomObject.onTeamVictory;
 
 _roomObject.loadMap(Map, 14, 14);
+
+betaTestAnnouncement = setInterval(() => { _roomObject.betaTestAnnouncement() }, betaTestAnnouncementInterval);
