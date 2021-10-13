@@ -13,7 +13,7 @@ Advanced penalty bot is a JavaScript based HaxBall bot which is developed by rev
 
 Of course, our bot is not an ordinary penalty shootout bot. That is, it has a lot of extras from an ordinary penalty bot. For example, a red arrow appears when a player is able to kick the ball (whereas the system freezes who anyone else moves). In the same, a timer counts the remaining time of the player for kicking the ball. (1.1)
 
-![image](https://user-images.githubusercontent.com/68077608/137138006-7c1d1e4f-a63f-454d-806c-d2b00fd0bd6f.png)
+![1 1](https://user-images.githubusercontent.com/68077608/137155704-8170d052-5546-4b8a-a25b-a767e4e54ab3.PNG)
 
 Is it the end? Of course, not. The most interesting and different ones are yet to come:
 
@@ -32,7 +32,7 @@ As in the most of the games, player is the main object of this game as well. So 
 * Admin (**bool**: inherited from **player.admin**)
 * Auth (**string**: inherited from **player.auth** on join)
 * Bad word usage; of course, we tolerate the players before banning them, when the things are gone wrong with them (**number**: 1 and 2 means warning, 3 means ban)
-* Blacklist date; essentially, this property is for admins to see or clear the blacklist. But sometimes, players may want to know when or how they blacklisted, this and the following properties are a good answer for them (**string**: inherited from **room.onPlayerKicked** event handler by using Date.now() function of JS)
+* Blacklist date; essentially, this property is for admins to see or clear the blacklist. But sometimes, players may want to know when or how they blacklisted, this and the following properties are a good answer for them (**string**: inherited from **room.onPlayerKicked** event handler by using Date.now() function of JS) (2.1)
 * Blacklist reason (**string**: inherited from **room.onPlayerKicked** event handler, if no reason, then it will be seen as undefined)
 * Blacklisted by; in some situations, player may not see who banned them and want to know him/her (**object**: inherited from **room.onPlayerKicked** event handler, if by the host, then it will be seen as undefined)
 * Conn (**string**: inherited from **player.conn** on join)
@@ -44,7 +44,7 @@ As in the most of the games, player is the main object of this game as well. So 
 * Is in the room; this is the most important property for the player; when one (human or bot) invokes a function, they should not confuse a player with another who is not in the room. For example: a player who is not in the room should not be voted. (**bool**: its default value is true and evaluated on join, becomes false when player leaves)
 * Is kickable; this one dependent of players' championships which we are going to explain as another player feature under the name of *score* (**bool**: if score is less than 1, then true)
 * Is muted; sometimes, admins may not want to one or more players to talk and so, they should to be able to mute them (**bool**: if true, player gets a warning which says their messages are just seen by the administration)
-* Joining time; this one is another important property of the player. Players can join the room with different names at different times, but their informations are stored also with auth and conn, so different auths/conns with same name are seen in one history. (**number**: inherited from **room.onPlayerJoin** by Date.now())
+* Joining time; this one is another important property of the player. Players can join the room with different names at different times, but their informations are stored also with auth and conn, so different auths/conns with same name are seen in one history. (**number**: inherited from **room.onPlayerJoin** by Date.now()) (2.2)
 * Language; players may want to see the content in another languages. Currently we have two languages in our bot. (**string**: default as variable of *locale*)
 * Name (**string**: inherited from **player.name**)
 * Score; this one should not to be confused with *goals*. It is increased when a player becomes the champion, by eliminating all their opponents; and is decreased when kicked by the champion. (**number**: if 0, player is called kickable; if greater than 0, then becomes not kickable but their score is decreased if they are the chosen one)
@@ -62,3 +62,8 @@ As in the most of the games, player is the main object of this game as well. So 
 * Votes given; when a player votes anyone else, this property moves in and the voted player approaches to being banned as the votes given to him increased (**number**: 0 to the half of max player amount for the room, for example: 4 for 8 of max capacity)
 
 The above are the properties of the player. Also, because of the player is a class, rather than an object, it has a lot of functions for changing that properties.
+
+![2 1](https://user-images.githubusercontent.com/68077608/137157658-5141690c-d8e1-4be0-bde5-509fa7d7751b.PNG)
+
+![2 2](https://user-images.githubusercontent.com/68077608/137157682-7a5fb0f9-94d4-4ae9-9135-438e314fb334.PNG)
+
