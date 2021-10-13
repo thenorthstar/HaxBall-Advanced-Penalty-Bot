@@ -1,4 +1,4 @@
-var Map = `{"name":"Penalty","width":420,"height":200,"spawnDistance":300,"canBeStored":false,"bg":{"type":"grass","width":500,"height":250,"kickOffRadius":10,"cornerRadius":0,"color":"008000"},"vertexes":[{"x":420,"y":600,"trait":"ballArea"},{"x":420,"y":-600,"trait":"ballArea"},{"x":285,"y":500,"trait":"gkArea"},{"x":285,"y":-500,"trait":"gkArea"},{"x":315,"y":500,"trait":"gkArea"},{"x":315,"y":-500,"trait":"gkArea"},{"x":-475,"y":-200,"trait":"penArea"},{"x":-10,"y":-190,"trait":"penArea"},{"x":-10,"y":190,"trait":"penArea"},{"x":-475,"y":200,"trait":"penArea"},{"x":300,"y":-250,"trait":"line"},{"x":300,"y":250,"trait":"line"},{"x":0,"y":9,"trait":"line"},{"x":0,"y":-9,"trait":"line"},{"x":0,"y":9,"trait":"line"},{"x":0,"y":-9,"trait":"line"},{"x":175,"y":-175,"trait":"line"},{"x":300,"y":-175,"trait":"line"},{"x":175,"y":175,"trait":"line"},{"x":300,"y":175,"trait":"line"},{"x":-120,"y":-250,"trait":"line"},{"x":-120,"y":250,"trait":"line"},{"x":-120,"y":-190,"trait":"line"},{"x":-120,"y":190,"trait":"line"},{"x":300,"y":-100,"trait":"line"},{"x":350,"y":-98,"trait":"line"},{"x":350,"y":98,"trait":"line"},{"x":300,"y":100,"trait":"line"},{"x":0,"y":-15,"trait":"powerboost"},{"x":0,"y":15,"trait":"powerboost"},{"x":400,"y":-135,"trait":"line"},{"x":400,"y":135,"trait":"line"},{"x":-120,"y":180,"trait":"timebar_moving_ball_stop"},{"x":-120,"y":120,"trait":"timebar_moving_ball_stop"}],"segments":[{"v0":0,"v1":1,"trait":"ballArea"},{"v0":2,"v1":3,"trait":"gkArea"},{"v0":4,"v1":5,"trait":"gkArea"},{"v0":6,"v1":7,"trait":"penArea"},{"v0":7,"v1":8,"curve":50,"trait":"penArea"},{"v0":8,"v1":9,"trait":"penArea"},{"v0":9,"v1":6,"trait":"penArea"},{"v0":10,"v1":11,"trait":"line"},{"v0":12,"v1":13,"curve":-180,"trait":"line"},{"v0":14,"v1":15,"curve":180,"trait":"line"},{"v0":16,"v1":17,"trait":"line"},{"v0":16,"v1":18,"trait":"line"},{"v0":18,"v1":19,"trait":"line"},{"v0":20,"v1":21,"trait":"line"},{"v0":22,"v1":23,"curve":-140,"trait":"line"},{"v0":24,"v1":25,"curve":10,"trait":"goalnet"},{"v0":25,"v1":26,"curve":10,"trait":"goalnet"},{"v0":26,"v1":27,"curve":10,"trait":"goalnet"},{"v0":28,"v1":29,"curve":180,"trait":"powerboost"},{"v0":25,"v1":30,"trait":"line"},{"v0":26,"v1":31,"trait":"line"},{"v0":32,"v1":33,"trait":"timebar_moving_ball_stop"}],"goals":[{"p0":[310,100],"p1":[310,-100],"team":"blue"},{"p0":[300,100],"p1":[-400,100],"team":"red"},{"p0":[300,-100],"p1":[-400,-100],"team":"red"},{"p0":[-10,250],"p1":[-10,-250],"team":"red"}],"discs":[{"pos":[300,100],"trait":"goalPost"},{"pos":[300,-100],"trait":"goalPost"},{"pos":[400,-135],"trait":"stanchion"},{"pos":[400,135],"trait":"stanchion"},{"pos":[-400,-385],"trait":"arrow"},{"pos":[-340,-385],"trait":"arrow"},{"pos":[-355,-400],"trait":"arrow"},{"pos":[-355,-370],"trait":"arrow"},{"pos":[-120,150],"trait":"timebar_ball_constant"},{"pos":[120,150],"trait":"timebar_ball_constant_2"},{"pos":[120,150],"trait":"timebar_ball_moving","speed":[-0.4,0]},{"pos":[1135,130],"trait":"number_indicator_0"},{"pos":[1160,130],"trait":"number_indicator_0"},{"pos":[1160,170],"trait":"number_indicator_0"},{"pos":[1135,170],"trait":"number_indicator_0"},{"pos":[1135,130],"trait":"number_indicator_1"},{"pos":[1135,170],"trait":"number_indicator_1"},{"pos":[1135,130],"trait":"number_indicator_2"},{"pos":[1160,130],"trait":"number_indicator_2"},{"pos":[1160,150],"trait":"number_indicator_2"},{"pos":[1135,150],"trait":"number_indicator_2"},{"pos":[1135,170],"trait":"number_indicator_2"},{"pos":[1160,170],"trait":"number_indicator_2"},{"pos":[1135,130],"trait":"number_indicator_3"},{"pos":[1160,130],"trait":"number_indicator_3"},{"pos":[1160,170],"trait":"number_indicator_3"},{"pos":[1135,170],"trait":"number_indicator_3"},{"pos":[1135,150],"trait":"number_indicator_3"},{"pos":[1160,150],"trait":"number_indicator_3"},{"pos":[1135,130],"trait":"number_indicator_4"},{"pos":[1160,130],"trait":"number_indicator_4"},{"pos":[1135,150],"trait":"number_indicator_4"},{"pos":[1160,170],"trait":"number_indicator_4"},{"pos":[1160,150],"trait":"number_indicator_4"},{"pos":[1160,130],"trait":"number_indicator_5"},{"pos":[1135,130],"trait":"number_indicator_5"},{"pos":[1135,150],"trait":"number_indicator_5"},{"pos":[1160,150],"trait":"number_indicator_5"},{"pos":[1160,170],"trait":"number_indicator_5"},{"pos":[1135,170],"trait":"number_indicator_5"},{"pos":[1160,130],"trait":"number_indicator_6"},{"pos":[1135,130],"trait":"number_indicator_6"},{"pos":[1135,170],"trait":"number_indicator_6"},{"pos":[1160,170],"trait":"number_indicator_6"},{"pos":[1160,150],"trait":"number_indicator_6"},{"pos":[1135,150],"trait":"number_indicator_6"},{"pos":[1135,130],"trait":"number_indicator_7"},{"pos":[1160,130],"trait":"number_indicator_7"},{"pos":[1160,170],"trait":"number_indicator_7"},{"pos":[1135,130],"trait":"number_indicator_8"},{"pos":[1160,130],"trait":"number_indicator_8"},{"pos":[1160,170],"trait":"number_indicator_8"},{"pos":[1135,170],"trait":"number_indicator_8"},{"pos":[1135,150],"trait":"number_indicator_8"},{"pos":[1160,150],"trait":"number_indicator_8"},{"pos":[1135,130],"trait":"number_indicator_9"},{"pos":[1160,130],"trait":"number_indicator_9"},{"pos":[1160,170],"trait":"number_indicator_9"},{"pos":[1135,170],"trait":"number_indicator_9"},{"pos":[1135,150],"trait":"number_indicator_9"},{"pos":[1160,150],"trait":"number_indicator_9"}],"planes":[{"normal":[0,1],"dist":-200,"trait":"ballArea","_data":{"extremes":{"normal":[0,1],"dist":-200,"canvas_rect":[-710,-600,1160,600],"a":[-710,-200],"b":[1160,-200]}}},{"normal":[0,-1],"dist":-200,"trait":"ballArea","_data":{"extremes":{"normal":[0,-1],"dist":-200,"canvas_rect":[-710,-600,1160,600],"a":[-710,200],"b":[1160,200]}}},{"normal":[0,1],"dist":-250,"bCoef":0.1,"_data":{"extremes":{"normal":[0,1],"dist":-250,"canvas_rect":[-710,-600,1160,600],"a":[-710,-250],"b":[1160,-250]}}},{"normal":[0,-1],"dist":-250,"bCoef":0.1,"_data":{"extremes":{"normal":[0,-1],"dist":-250,"canvas_rect":[-710,-600,1160,600],"a":[-710,250],"b":[1160,250]}}},{"normal":[1,0],"dist":-400,"bCoef":0.1,"_data":{"extremes":{"normal":[1,0],"dist":-400,"canvas_rect":[-710,-600,1160,600],"a":[-400,-600],"b":[-400,600]}}},{"normal":[-1,0],"dist":-400,"bCoef":0.1,"_data":{"extremes":{"normal":[-1,0],"dist":-400,"canvas_rect":[-710,-600,1160,600],"a":[400,-600],"b":[400,600]}}}],"traits":{"ballArea":{"vis":false,"bCoef":1,"cMask":["ball"]},"gkArea":{"vis":false,"bCoef":0,"cMask":["blue"]},"penArea":{"vis":false,"bCoef":0,"cMask":["red"]},"line":{"vis":true,"color":"C7E6BD","cMask":[]},"goalnet":{"vis":true,"bCoef":0.1,"color":"C7E6BD","cMask":["ball","red","blue"]},"powerboost":{"vis":false,"bCoef":-2.4,"cMask":["ball"],"color":"C7E6BD"},"goalPost":{"radius":5,"invMass":0,"bCoef":1.3,"color":"FFFFFF"},"stanchion":{"radius":3,"invMass":0,"bCoef":1,"color":"FFFFFF"},"arrow":{"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"],"radius":0},"timebar_ball_constant":{"bCoef":0,"radius":0,"invMass":0,"damping":0,"cMask":["c1"],"cGroup":["c1"]},"timebar_ball_constant_2":{"bCoef":0,"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"timebar_ball_moving":{"bCoef":0,"radius":0,"invMass":5e-324,"damping":1,"cMask":["c1"],"cGroup":["c1"]},"timebar_moving_ball_stop":{"vis":false,"bCoef":0,"cMask":["c1"],"cGroup":["c1"],"bias":-280},"number_indicator_0":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_1":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_2":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_3":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_4":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_5":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_6":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_7":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_8":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_9":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]}},"joints":[{"d0":5,"d1":6,"color":"FF0000"},{"d0":6,"d1":7,"color":"FF0000"},{"d0":6,"d1":8,"color":"FF0000"},{"d0":9,"d1":10,"color":"718C5A"},{"d0":9,"d1":11,"color":"C7E6BD","length":[0,240]},{"d0":12,"d1":13,"color":"FF0000"},{"d0":13,"d1":14,"color":"FF0000"},{"d0":14,"d1":15,"color":"FF0000"},{"d0":12,"d1":15,"color":"FF0000"},{"d0":16,"d1":17,"color":"FF4000"},{"d0":18,"d1":19,"color":"FF8000"},{"d0":19,"d1":20,"color":"FF8000"},{"d0":20,"d1":21,"color":"FF8000"},{"d0":21,"d1":22,"color":"FF8000"},{"d0":22,"d1":23,"color":"FF8000"},{"d0":24,"d1":25,"color":"FFC000"},{"d0":25,"d1":26,"color":"FFC000"},{"d0":26,"d1":27,"color":"FFC000"},{"d0":28,"d1":29,"color":"FFC000"},{"d0":30,"d1":32,"color":"FFFF00"},{"d0":31,"d1":33,"color":"FFFF00"},{"d0":32,"d1":34,"color":"FFFF00"},{"d0":35,"d1":36,"color":"C0FF00"},{"d0":36,"d1":37,"color":"C0FF00"},{"d0":37,"d1":38,"color":"C0FF00"},{"d0":38,"d1":39,"color":"C0FF00"},{"d0":39,"d1":40,"color":"C0FF00"},{"d0":41,"d1":42,"color":"80FF00"},{"d0":42,"d1":43,"color":"80FF00"},{"d0":43,"d1":44,"color":"80FF00"},{"d0":44,"d1":45,"color":"80FF00"},{"d0":45,"d1":46,"color":"80FF00"},{"d0":47,"d1":48,"color":"40FF00"},{"d0":48,"d1":49,"color":"40FF00"},{"d0":50,"d1":51,"color":"00FF00"},{"d0":51,"d1":52,"color":"00FF00"},{"d0":52,"d1":53,"color":"00FF00"},{"d0":50,"d1":53,"color":"00FF00"},{"d0":54,"d1":55,"color":"00FF00"},{"d0":56,"d1":57,"color":"00FF40"},{"d0":57,"d1":58,"color":"00FF40"},{"d0":58,"d1":59,"color":"00FF40"},{"d0":56,"d1":60,"color":"00FF40"},{"d0":60,"d1":61,"color":"00FF40"}],"redSpawnPoints":[],"blueSpawnPoints":[],"cameraFollow":"player","kickOffReset":"full","cameraWidth":1000,"cameraHeight":1000,"maxViewWidth":2000,"ballPhysics":{"radius":10},"playerPhysics":{"radius":15}}`
+var Map = `{"name":"Penalty","width":420,"height":200,"spawnDistance":300,"canBeStored":false,"bg":{"type":"grass","width":500,"height":250,"kickOffRadius":10,"cornerRadius":0,"color":"008000"},"vertexes":[{"x":420,"y":600,"trait":"ballArea"},{"x":420,"y":-600,"trait":"ballArea"},{"x":285,"y":500,"trait":"gkArea"},{"x":285,"y":-500,"trait":"gkArea"},{"x":315,"y":500,"trait":"gkArea"},{"x":315,"y":-500,"trait":"gkArea"},{"x":-475,"y":-200,"trait":"penArea"},{"x":-10,"y":-190,"trait":"penArea"},{"x":-10,"y":190,"trait":"penArea"},{"x":-475,"y":200,"trait":"penArea"},{"x":300,"y":-250,"trait":"line"},{"x":300,"y":250,"trait":"line"},{"x":0,"y":9,"trait":"line"},{"x":0,"y":-9,"trait":"line"},{"x":0,"y":9,"trait":"line"},{"x":0,"y":-9,"trait":"line"},{"x":175,"y":-175,"trait":"line"},{"x":300,"y":-175,"trait":"line"},{"x":175,"y":175,"trait":"line"},{"x":300,"y":175,"trait":"line"},{"x":-120,"y":-250,"trait":"line"},{"x":-120,"y":250,"trait":"line"},{"x":-120,"y":-190,"trait":"line"},{"x":-120,"y":190,"trait":"line"},{"x":300,"y":-100,"trait":"line"},{"x":350,"y":-98,"trait":"line"},{"x":350,"y":98,"trait":"line"},{"x":300,"y":100,"trait":"line"},{"x":0,"y":-15,"trait":"powerboost"},{"x":0,"y":15,"trait":"powerboost"},{"x":400,"y":-135,"trait":"line"},{"x":400,"y":135,"trait":"line"},{"x":-120,"y":180,"trait":"timebar_moving_ball_stop"},{"x":-120,"y":120,"trait":"timebar_moving_ball_stop"},{"x":-120,"y":-100,"cMask":["none"],"cGroup":["none"]},{"x":-120,"y":100,"cMask":["none"],"cGroup":["none"]},{"x":-10,"y":-100,"cMask":["none"],"cGroup":["none"]},{"x":-10,"y":100,"cMask":["none"],"cGroup":["none"]}],"segments":[{"v0":0,"v1":1,"trait":"ballArea"},{"v0":2,"v1":3,"trait":"gkArea"},{"v0":4,"v1":5,"trait":"gkArea"},{"v0":6,"v1":7,"trait":"penArea"},{"v0":7,"v1":8,"curve":50,"trait":"penArea"},{"v0":8,"v1":9,"trait":"penArea"},{"v0":9,"v1":6,"trait":"penArea"},{"v0":10,"v1":11,"trait":"line"},{"v0":12,"v1":13,"curve":-180,"trait":"line"},{"v0":14,"v1":15,"curve":180,"trait":"line"},{"v0":16,"v1":17,"trait":"line"},{"v0":16,"v1":18,"trait":"line"},{"v0":18,"v1":19,"trait":"line"},{"v0":20,"v1":21,"trait":"line"},{"v0":22,"v1":23,"curve":-140,"trait":"line"},{"v0":24,"v1":25,"curve":10,"trait":"goalnet"},{"v0":25,"v1":26,"curve":10,"trait":"goalnet"},{"v0":26,"v1":27,"curve":10,"trait":"goalnet"},{"v0":28,"v1":29,"curve":180,"trait":"powerboost"},{"v0":25,"v1":30,"trait":"line"},{"v0":26,"v1":31,"trait":"line"},{"v0":32,"v1":33,"trait":"timebar_moving_ball_stop"},{"v0":34,"v1":35,"trait":"dangerZoneMinX","x":-120},{"v0":36,"v1":37,"trait":"dangerZoneMaxX","x":-10},{"v0":34,"v1":36,"trait":"dangerZoneMinY","y":-100},{"v0":35,"v1":37,"trait":"dangerZoneMaxY","y":100}],"goals":[{"p0":[310,100],"p1":[310,-100],"team":"blue"},{"p0":[300,100],"p1":[-400,100],"team":"red"},{"p0":[300,-100],"p1":[-400,-100],"team":"red"},{"p0":[-10,250],"p1":[-10,-250],"team":"red"}],"discs":[{"pos":[300,100],"trait":"goalPost"},{"pos":[300,-100],"trait":"goalPost"},{"pos":[400,-135],"trait":"stanchion"},{"pos":[400,135],"trait":"stanchion"},{"pos":[-400,-1385],"trait":"arrow"},{"pos":[-340,-1385],"trait":"arrow"},{"pos":[-355,-1400],"trait":"arrow"},{"pos":[-355,-1370],"trait":"arrow"},{"pos":[-120,150],"trait":"timebar_ball_constant"},{"pos":[120,150],"trait":"timebar_ball_constant_2"},{"pos":[120,150],"trait":"timebar_ball_moving","speed":[-0.4,0]},{"pos":[1135,130],"trait":"number_indicator_0"},{"pos":[1160,130],"trait":"number_indicator_0"},{"pos":[1160,170],"trait":"number_indicator_0"},{"pos":[1135,170],"trait":"number_indicator_0"},{"pos":[1135,130],"trait":"number_indicator_1"},{"pos":[1135,170],"trait":"number_indicator_1"},{"pos":[1135,130],"trait":"number_indicator_2"},{"pos":[1160,130],"trait":"number_indicator_2"},{"pos":[1160,150],"trait":"number_indicator_2"},{"pos":[1135,150],"trait":"number_indicator_2"},{"pos":[1135,170],"trait":"number_indicator_2"},{"pos":[1160,170],"trait":"number_indicator_2"},{"pos":[1135,130],"trait":"number_indicator_3"},{"pos":[1160,130],"trait":"number_indicator_3"},{"pos":[1160,170],"trait":"number_indicator_3"},{"pos":[1135,170],"trait":"number_indicator_3"},{"pos":[1135,150],"trait":"number_indicator_3"},{"pos":[1160,150],"trait":"number_indicator_3"},{"pos":[1135,130],"trait":"number_indicator_4"},{"pos":[1160,130],"trait":"number_indicator_4"},{"pos":[1135,150],"trait":"number_indicator_4"},{"pos":[1160,170],"trait":"number_indicator_4"},{"pos":[1160,150],"trait":"number_indicator_4"},{"pos":[1160,130],"trait":"number_indicator_5"},{"pos":[1135,130],"trait":"number_indicator_5"},{"pos":[1135,150],"trait":"number_indicator_5"},{"pos":[1160,150],"trait":"number_indicator_5"},{"pos":[1160,170],"trait":"number_indicator_5"},{"pos":[1135,170],"trait":"number_indicator_5"},{"pos":[1160,130],"trait":"number_indicator_6"},{"pos":[1135,130],"trait":"number_indicator_6"},{"pos":[1135,170],"trait":"number_indicator_6"},{"pos":[1160,170],"trait":"number_indicator_6"},{"pos":[1160,150],"trait":"number_indicator_6"},{"pos":[1135,150],"trait":"number_indicator_6"},{"pos":[1135,130],"trait":"number_indicator_7"},{"pos":[1160,130],"trait":"number_indicator_7"},{"pos":[1160,170],"trait":"number_indicator_7"},{"pos":[1135,130],"trait":"number_indicator_8"},{"pos":[1160,130],"trait":"number_indicator_8"},{"pos":[1160,170],"trait":"number_indicator_8"},{"pos":[1135,170],"trait":"number_indicator_8"},{"pos":[1135,150],"trait":"number_indicator_8"},{"pos":[1160,150],"trait":"number_indicator_8"},{"pos":[1135,130],"trait":"number_indicator_9"},{"pos":[1160,130],"trait":"number_indicator_9"},{"pos":[1160,170],"trait":"number_indicator_9"},{"pos":[1135,170],"trait":"number_indicator_9"},{"pos":[1135,150],"trait":"number_indicator_9"},{"pos":[1160,150],"trait":"number_indicator_9"}],"planes":[{"normal":[0,1],"dist":-200,"trait":"ballArea","_data":{"extremes":{"normal":[0,1],"dist":-200,"canvas_rect":[-710,-1400,1160,600],"a":[-710,-200],"b":[1160,-200]}}},{"normal":[0,-1],"dist":-200,"trait":"ballArea","_data":{"extremes":{"normal":[0,-1],"dist":-200,"canvas_rect":[-710,-1400,1160,600],"a":[-710,200],"b":[1160,200]}}},{"normal":[0,1],"dist":-250,"bCoef":0.1,"_data":{"extremes":{"normal":[0,1],"dist":-250,"canvas_rect":[-710,-1400,1160,600],"a":[-710,-250],"b":[1160,-250]}}},{"normal":[0,-1],"dist":-250,"bCoef":0.1,"_data":{"extremes":{"normal":[0,-1],"dist":-250,"canvas_rect":[-710,-1400,1160,600],"a":[-710,250],"b":[1160,250]}}},{"normal":[1,0],"dist":-400,"bCoef":0.1,"_data":{"extremes":{"normal":[1,0],"dist":-400,"canvas_rect":[-710,-1400,1160,600],"a":[-400,-1400],"b":[-400,600]}}},{"normal":[-1,0],"dist":-400,"bCoef":0.1,"_data":{"extremes":{"normal":[-1,0],"dist":-400,"canvas_rect":[-710,-1400,1160,600],"a":[400,-1400],"b":[400,600]}}}],"traits":{"ballArea":{"vis":false,"bCoef":1,"cMask":["ball"]},"gkArea":{"vis":false,"bCoef":0,"cMask":["blue"]},"penArea":{"vis":false,"bCoef":0,"cMask":["red"]},"line":{"vis":true,"color":"C7E6BD","cMask":[]},"goalnet":{"vis":true,"bCoef":0.1,"color":"C7E6BD","cMask":["ball","red","blue"]},"powerboost":{"vis":false,"bCoef":-2.4,"cMask":["ball"],"color":"C7E6BD"},"goalPost":{"radius":5,"invMass":0,"bCoef":1.3,"color":"FFFFFF"},"stanchion":{"radius":3,"invMass":0,"bCoef":1,"color":"FFFFFF"},"arrow":{"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"],"radius":0},"timebar_ball_constant":{"bCoef":0,"radius":0,"invMass":0,"damping":0,"cMask":["c1"],"cGroup":["c1"]},"timebar_ball_constant_2":{"bCoef":0,"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"timebar_ball_moving":{"bCoef":0,"radius":0,"invMass":5e-324,"damping":1,"cMask":["c1"],"cGroup":["c1"]},"timebar_moving_ball_stop":{"vis":false,"bCoef":0,"cMask":["c1"],"cGroup":["c1"],"bias":-280},"number_indicator_0":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_1":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_2":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_3":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_4":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_5":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_6":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_7":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_8":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_9":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"dangerZoneMinX":{"vis":false,"cMask":["none"],"cGroup":["none"]},"dangerZoneMaxX":{"vis":false,"cMask":["none"],"cGroup":["none"]},"dangerZoneMinY":{"vis":false,"cMask":["none"],"cGroup":["none"]},"dangerZoneMaxY":{"vis":false,"cMask":["none"],"cGroup":["none"]}},"joints":[{"d0":5,"d1":6,"color":"FF0000"},{"d0":6,"d1":7,"color":"FF0000"},{"d0":6,"d1":8,"color":"FF0000"},{"d0":9,"d1":10,"color":"718C5A"},{"d0":9,"d1":11,"color":"C7E6BD","length":[0,240]},{"d0":12,"d1":13,"color":"FF0000"},{"d0":13,"d1":14,"color":"FF0000"},{"d0":14,"d1":15,"color":"FF0000"},{"d0":12,"d1":15,"color":"FF0000"},{"d0":16,"d1":17,"color":"FF4000"},{"d0":18,"d1":19,"color":"FF8000"},{"d0":19,"d1":20,"color":"FF8000"},{"d0":20,"d1":21,"color":"FF8000"},{"d0":21,"d1":22,"color":"FF8000"},{"d0":22,"d1":23,"color":"FF8000"},{"d0":24,"d1":25,"color":"FFC000"},{"d0":25,"d1":26,"color":"FFC000"},{"d0":26,"d1":27,"color":"FFC000"},{"d0":28,"d1":29,"color":"FFC000"},{"d0":30,"d1":32,"color":"FFFF00"},{"d0":31,"d1":33,"color":"FFFF00"},{"d0":32,"d1":34,"color":"FFFF00"},{"d0":35,"d1":36,"color":"C0FF00"},{"d0":36,"d1":37,"color":"C0FF00"},{"d0":37,"d1":38,"color":"C0FF00"},{"d0":38,"d1":39,"color":"C0FF00"},{"d0":39,"d1":40,"color":"C0FF00"},{"d0":41,"d1":42,"color":"80FF00"},{"d0":42,"d1":43,"color":"80FF00"},{"d0":43,"d1":44,"color":"80FF00"},{"d0":44,"d1":45,"color":"80FF00"},{"d0":45,"d1":46,"color":"80FF00"},{"d0":47,"d1":48,"color":"40FF00"},{"d0":48,"d1":49,"color":"40FF00"},{"d0":50,"d1":51,"color":"00FF00"},{"d0":51,"d1":52,"color":"00FF00"},{"d0":52,"d1":53,"color":"00FF00"},{"d0":50,"d1":53,"color":"00FF00"},{"d0":54,"d1":55,"color":"00FF00"},{"d0":56,"d1":57,"color":"00FF40"},{"d0":57,"d1":58,"color":"00FF40"},{"d0":58,"d1":59,"color":"00FF40"},{"d0":56,"d1":60,"color":"00FF40"},{"d0":60,"d1":61,"color":"00FF40"}],"redSpawnPoints":[],"blueSpawnPoints":[],"cameraFollow":"player","kickOffReset":"full","cameraWidth":1000,"cameraHeight":1000,"maxViewWidth":2000,"ballPhysics":{"radius":10},"playerPhysics":{"radius":15,"damping":0.96,"acceleration":0.1,"invMass":0.5,"bCoef":0.5}}`
 
 var JMap = JSON.parse(Map);
 
@@ -20,12 +20,22 @@ var room = HBInit({ roomName: roomName, playerName: playerName, noPlayer: noPlay
 var adminLengthLimit = 1;
 var ballKick = false;
 var ballTouch = false;
+var betaTestAnnouncement;
+var betaTestAnnouncementInterval = 120000;
 var championVoteKickTime = 10000;
 var championVoteKickTimeout;
 var clearAllAvatarsTimeout = 5000;
-var discordLink = "";
-var eliminationReasons = { nothing: 0, kickOff: 1, miss: 2, timeout: 3 };
+
+var dangerZoneMinX = JMap.segments.find(s => s.trait == "dangerZoneMinX").x;
+var dangerZoneMaxX = JMap.segments.find(s => s.trait == "dangerZoneMaxX").x;
+var dangerZoneMinY = JMap.segments.find(s => s.trait == "dangerZoneMinY").y;
+var dangerZoneMaxY = JMap.segments.find(s => s.trait == "dangerZoneMaxY").y;
+var dangerZoneFinalKickEliminationTimeout = 1;
+
+var discordLink = "https://discord.gg/t6Wvbqk";
+var eliminationReasons = { nothing: 0, kickOff: 1, miss: 2, stop: 3, timeout: 4 };
 var enoughPlayers = 4;
+var enoughPlayersToStartMatch = 4;
 var enoughTime = 300000;
 var gameDelayingLimit = 600;
 var gameDelayingTimeout;
@@ -50,11 +60,12 @@ var locales = {
         ChampionInfoMessage: "🏆 Şampiyon oldunuz. Tebrikler!",
         KickOffDelayingEliminationMessage: "😒 Atışı geciktirdiğiniz için elendiniz.",
         MissEliminationMessage: "😂 Atışı kaçırdığınız için elendiniz.",
+        StoppingEliminationMessage: "😒 Atış bölgesinde yavaşladığınız için elendiniz.",
         AdminWarningMessage: "ℹ️ Admin olmak için discord adresimizden başvuruda bulunmanız gerekmektedir: " + discordLink,
         BestInfoMessage: "ℹ️ En skorer oyuncu: ",
         DiscordInfoMessage: "ℹ️ Discord sunucumuz: " + discordLink,
         RankInfoMessage: "ℹ️ İstatistikleriniz: ",
-        TrashGKKickMessage: "⚠️ Kötü kaleci olduğunuz için odadan uzaklaştırıldınız.",
+        TrashGKKickMessage: "⚠️ Kötü kaleci olduğunuz için odadan 5 dakika süreyle uzaklaştırıldınız: ",
         VoteWarningMessage: "⚠️ Lütfen bir ID seçiniz, süreniz 10 saniyedir. Kullanılabilir ID'ler:\nKullanmamayı tercih ediyorum: [0]\n",
         PlayerPenalizedKickMessage: "⚠️ Seçim sonucunda 5 dakika süre ile cezalandırıldınız. Seçimi yapan kişi: ",
         PlayerStillPenalizedKickMessage: "⚠️ Cezalı olduğunuz için odaya giremezsiniz. Lütfen cezanızın bitmesini bekleyiniz.",
@@ -130,17 +141,19 @@ var locales = {
         AuthInfoMessage: "Auth: ",
         ConnInfoMessage: "Conn: ",
         BlackListRemoveNoAccountsFoundWarningMessage: "⚠️ Auth, conn ya da name özelliklerinden biri ya da birden fazlası doğru değildir. Lütfen tekrar deneyiniz!",
-        NoAvailablePlayersFoundWarningMessage: "⚠️ Uygun oyuncu bulunamadı!"
+        NoAvailablePlayersFoundWarningMessage: "⚠️ Uygun oyuncu bulunamadı!",
+        BetaTestAnnouncementMessage: "⚠️ Botumuz test aşamasındadır. Botumuz ile ilgili öneri ve şikâyetlerinizi " + discordLink + " adresinden sunucumuza gelip bildirebilirsiniz."
     },
     en: {
         ChampionInfoMessage: "🏆 You are the champion. Congratulations!",
         KickOffDelayingEliminationMessage: "😒 You were eliminated because of delaying your throw.",
         MissEliminationMessage: "😂 You have missed and were eliminated.",
+        StoppingEliminationMessage: "😒 You were eliminated because of slowing down.",
         AdminWarningMessage: "ℹ️ Only the approved discord members can take administrator rights in this room: " + discordLink,
         BestInfoMessage: "ℹ️ The top scorer is: ",
         DiscordInfoMessage: "ℹ️ Our discord address: " + discordLink,
         RankInfoMessage: "ℹ️ Your statistics: ",
-        TrashGKKickMessage: "⚠️ Your performance isn't fitting within the norms of this room so you were kicked.",
+        TrashGKKickMessage: "⚠️ Your performance isn't fitting within the norms of this room so you were kicked until: ",
         VoteWarningMessage: "⚠️ Please select an ID in 10 seconds. Available ID's\nI won't use my right: [0]\n",
         PlayerPenalizedKickMessage: "⚠️ You have been penalized for 5 minutes by ",
         PlayerStillPenalizedKickMessage: "⚠️ You are penalized, please wait for your penalization to end.",
@@ -216,13 +229,14 @@ var locales = {
         AuthInfoMessage: "Auth: ",
         ConnInfoMessage: "Conn: ",
         BlackListRemoveNoAccountsFoundWarningMessage: "⚠️ Auth, conn or name is wrong. Please try again!",
-        NoAvailablePlayersFoundWarningMessage: "⚠️ No available players found!"
+        NoAvailablePlayersFoundWarningMessage: "⚠️ No available players found!",
+        BetaTestAnnouncementMessage: "⚠️ This room is in the beta testing. You can send feedback about our bot through " + discordLink + "."
     }
 };
 
-var messageColors = { kick: 0x8A0303, ban: 0x8A0303, elimination_delay_kickoff: 0xFF8000, elimination_miss: 0x0080FF, elimination_timeout: 0x008080, deny: 0xFF0000, warning: 0xFFFF00, grant: 0x00FF00, info: 0x00FFFF, default: 0x8ED2AB, welcome: 0xFFFFFF, goal: 0x80FF00 };
-var messageFonts = { kick: "bold", ban: "bold", elimination_delay_kickoff: "normal", elimination_miss: "bold", elimination_timeout: "bold", deny: "bold", warning: "bold", grant: "normal", info: "normal", default: "bold", welcome: "italic", goal: "bold" };
-var messageSounds = { kick: 0, ban: 0, elimination_delay_kickoff: 1, elimination_miss: 2, elimination_timeout: 2, deny: 2, warning: 2, grant: 1, info: 1, default: 1, welcome: 2, goal: 1 };
+var messageColors = { kick: 0x8A0303, ban: 0x8A0303, elimination_delay_kickoff: 0xFF8000, elimination_miss: 0x0080FF, elimination_stop: 0x00FF80, elimination_timeout: 0x008080, deny: 0xFF0000, warning: 0xFFFF00, grant: 0x00FF00, info: 0x00FFFF, announcement: 0x8ED2AB, welcome: 0xFFFFFF, goal: 0x80FF00, admin: 0x97FFFF, civil: 0xFFFFFF };
+var messageFonts = { kick: "bold", ban: "bold", elimination_delay_kickoff: "normal", elimination_miss: "bold", elimination_stop: "bold", elimination_timeout: "bold", deny: "bold", warning: "bold", grant: "normal", info: "normal", announcement: "bold", welcome: "italic", goal: "bold", admin: "bold", civil: "normal" };
+var messageSounds = { kick: 0, ban: 0, elimination_delay_kickoff: 1, elimination_miss: 2, elimination_stop: 1, elimination_timeout: 2, deny: 2, warning: 2, grant: 1, info: 1, announcement: 1, welcome: 2, goal: 1, admin: 1, civil: 1 };
 var minNameLength = 3;
 var mute_list = [];
 var muteall = false;
@@ -241,8 +255,12 @@ var number_indicators_8 = [];
 var number_indicators_9 = [];
 
 var penalizeDuration = 300000;
+var playerAcceleration = JMap.playerPhysics.acceleration;
+var playerDamping = JMap.playerPhysics.damping;
+var dangerZoneRequiredSpeedReduceCoefficient = playerDamping;
 var playerKicked = false;
 var playerList = [];
+var playerMaxSpeed = playerAcceleration * playerDamping / (1 - playerDamping); //If damping < 1
 var prefix = "!";
 var radiusBall = JMap.ballPhysics.radius;
 var radiusPlayer = JMap.playerPhysics.radius;
@@ -267,8 +285,14 @@ class playerObject {
         }
 
         this._initPlayer = (player) => {
-            playerList[player.id - 1] = { admin: player.admin, auth: player.auth, badWordUsage: 0, blackListDate: undefined, blackListReason: undefined, blackListedBy: undefined, conn: player.conn, eliminationReason: eliminationReasons.nothing, goals: 0, id: player.id, initialPosition: player.position, isBlacklisted: false, isInTheRoom: true, isKickable: false, isMuted: false, jointime: Date.now(), language: locale, name: player.name, score: 0, successfulJoin: true, team: player.team, turn: false, votedIds: [], votesGiven: 0 };
+            playerList[player.id - 1] = { admin: player.admin, auth: player.auth, badWordUsage: 0, blackListDate: undefined, blackListReason: undefined, blackListedBy: undefined, conn: player.conn, eliminationReason: eliminationReasons.nothing, goals: 0, id: player.id, initialPosition: player.position, isBlacklisted: false, isInTheRoom: true, isKickable: false, isMuted: false, jointime: Date.now(), language: locale, name: player.name, score: 0, speedsInDangerZone: [], successfulJoin: true, team: player.team, turn: false, votedIds: [], votesGiven: 0 };
             ranks[player.id - 1] = { id: player.id, name: player.name, goals: 0 };
+        }
+
+        this.clearSpeedsInDangerZone = (player = _roomObject.findActivePlayer()) => {
+            if (_roomObject.isPlayerInDangerZone(player) == false && playerList[player.id - 1].speedsInDangerZone.length > 0) {
+                playerList[player.id - 1].speedsInDangerZone = [];
+            }
         }
 
         this.decreaseScore = (player) => {
@@ -327,8 +351,6 @@ class playerObject {
             var length = accounts.length;
             var lastAccount;
             length != 0 ? lastAccount = accounts[length - 1] : lastAccount = undefined;
-
-            console.log(lastAccount);
 
             if (lastAccount != undefined) {
                 if (playerList[lastAccount.id - 1].isBlacklisted == true) {
@@ -394,6 +416,12 @@ class playerObject {
             if (slowMode_muted.includes(auth) == false) {
                 slowMode_muted.push(auth);
                 setTimeout(() => { _playerObject.removeSlowMode(auth) }, slowModeDuration);
+            }
+        }
+
+        this.pushSpeedsInDangerZone = (player = _roomObject.findActivePlayer()) => {
+            if (_roomObject.isPlayerInDangerZone(player) == true) {
+                playerList[player.id - 1].speedsInDangerZone.push(Math.hypot(room.getPlayerDiscProperties(player.id).xspeed, room.getPlayerDiscProperties(player.id).yspeed));
             }
         }
 
@@ -499,6 +527,10 @@ class roomObject {
             room.sendAnnouncement(locales[locale].ActiveTurnMessage + _roomObject.findActivePlayer().name, null, messageColors.warning, messageFonts.warning, messageSounds.warning);
         }
 
+        this.betaTestAnnouncement = () => {
+            room.sendAnnouncement(locales[locale].BetaTestAnnouncementMessage, null, messageColors.announcement, messageFonts.announcement, messageSounds.announcement);
+        }
+
         this.blackList = (kickedPlayer, reason, ban, byPlayer) => {
             playerList[kickedPlayer.id - 1].isBlacklisted = ban;
             playerList[kickedPlayer.id - 1].blackListDate = (new Date(Date.now())).toISOString().replace("T", " ").replace("Z", "");
@@ -512,10 +544,23 @@ class roomObject {
             lastChampion = player;
         }
 
+        this.changeFontColorIfAdmin = (player, message) => {
+            if (player.admin == true) {
+                room.sendAnnouncement("💬 (" + new Date().toLocaleTimeString() + ") " + player.name + " [" + player.id + "]: " + message, null, messageColors.admin, messageFonts.admin, messageSounds.admin);
+                return false;
+            }
+        }
+
         this.checkEnd = () => {
             _roomObject.players().filter(p => p.id != lastChampion.id).forEach(p => { room.setPlayerTeam(p.id, teamsEnumerator.red); });
             room.setPlayerTeam(lastChampion.id, teamsEnumerator.blue);
             room.startGame();
+        }
+
+        this.checkIfEnoughPlayers = () => {
+            if (room.getScores() != null && _roomObject.players().length == enoughPlayersToStartMatch) {
+                room.startGame();
+            }
         }
 
         this.clearAllAvatars = () => {
@@ -539,17 +584,19 @@ class roomObject {
         }
 
         this.eliminate = (player) => {
-            ballKick = false;
-            ballTouch = false;
-            gameTick = 0;
-            _roomObject.advanceTurn();
+            if (_roomObject.isFinalKick() == false) {
+                _roomObject.advanceTurn();
+                ballKick = false;
+                ballTouch = false;
+                gameTick = 0;
+            }
             room.setPlayerTeam(player.id, teamsEnumerator.spec);
-            playerList[player.id - 1].eliminationReason == eliminationReasons.kickOff ? room.sendAnnouncement(locales[playerList[player.id - 1].language].KickOffDelayingEliminationMessage, player.id, messageColors.elimination_delay_kickoff, messageFonts.elimination_delay_kickoff, messageSounds.elimination_delay_kickoff) : playerList[player.id - 1].eliminationReason == eliminationReasons.miss ? room.sendAnnouncement(locales[playerList[player.id - 1].language].MissEliminationMessage, player.id, messageColors.elimination_miss, messageFonts.elimination_miss, messageSounds.elimination_miss) : room.sendAnnouncement(locales[playerList[player.id - 1].language].TimeLimitEliminationMessage, player.id, messageColors.timeout, messageFonts.elimination_timeout, messageSounds.elimination_timeout);
+            playerList[player.id - 1].eliminationReason == eliminationReasons.kickOff ? room.sendAnnouncement(locales[playerList[player.id - 1].language].KickOffDelayingEliminationMessage, player.id, messageColors.elimination_delay_kickoff, messageFonts.elimination_delay_kickoff, messageSounds.elimination_delay_kickoff) : playerList[player.id - 1].eliminationReason == eliminationReasons.miss ? room.sendAnnouncement(locales[playerList[player.id - 1].language].MissEliminationMessage, player.id, messageColors.elimination_miss, messageFonts.elimination_miss, messageSounds.elimination_miss) : playerList[player.id - 1].eliminationReason == eliminationReasons.stop ? room.sendAnnouncement(locales[playerList[player.id - 1].language].StoppingEliminationMessage, player.id, messageColors.elimination_stop, messageFonts.elimination_stop, messageSounds.elimination_stop) : room.sendAnnouncement(locales[playerList[player.id - 1].language].TimeLimitEliminationMessage, player.id, messageColors.elimination_timeout, messageFonts.elimination_timeout, messageSounds.elimination_timeout);
 
             if (_roomObject.isFinalKick() == true) {
                 if (_roomObject.team_blue().length > 0) {
-                    _roomObject.champion(_roomObject.team_blue()[0]);
                     room.stopGame();
+                    _roomObject.champion(_roomObject.team_blue()[0]);
                     _roomObject.startVoteSession(_roomObject.team_blue()[0]);
                 }
             }
@@ -746,6 +793,27 @@ class roomObject {
             return string.match(new RegExp(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi));
         }
 
+        this.isPlayerInDangerZone = (player = _roomObject.findActivePlayer()) => {
+            return (dangerZoneMinX + room.getPlayerDiscProperties(player.id).radius <= room.getPlayerDiscProperties(player.id).x && room.getPlayerDiscProperties(player.id).x <= dangerZoneMaxX - room.getPlayerDiscProperties(player.id).radius) && (dangerZoneMinY + room.getPlayerDiscProperties(player.id).radius <= room.getPlayerDiscProperties(player.id).y && room.getPlayerDiscProperties(player.id).y <= dangerZoneMaxY - room.getPlayerDiscProperties(player.id).radius);
+        }
+
+        this.isPlayerSlowingDown = (player = _roomObject.findActivePlayer()) => {
+            if (ballTouch == false && _roomObject.isPlayerInDangerZone(player) == true) {
+                if (parseFloat(playerList[player.id - 1].speedsInDangerZone[playerList[player.id - 1].speedsInDangerZone.length - 1] / playerList[player.id - 1].speedsInDangerZone[playerList[player.id - 1].speedsInDangerZone.length - 2]) == dangerZoneRequiredSpeedReduceCoefficient) {
+                    playerList[player.id - 1].eliminationReason = eliminationReasons.stop;
+
+                    if (_roomObject.isFinalKick() == false) {
+                        _roomObject.resetIndicators();
+                        _roomObject.eliminate(player);
+                    }
+                    else {
+                        room.pauseGame(true);
+                        setTimeout(() => { _roomObject.eliminate(player); }, dangerZoneFinalKickEliminationTimeout);
+                    }
+                }
+            }
+        }
+
         this.isProfane = (string) => {
             return string.match("/^oç$/");
         }
@@ -772,7 +840,9 @@ class roomObject {
         this.kickTrashGK = (player) => {
             if (_roomObject.isTrashGK(player)) {
                 _playerObject.decreaseScore(player);
-                room.kickPlayer(player.id, locales[playerList[player.id - 1].language].TrashGKKickMessage, kickTypes.trash);
+                _playerObject.penalize(player);
+                var date = (new Date(Date.now() + penalizeDuration)).toLocaleTimeString();
+                room.kickPlayer(player.id, locales[playerList[player.id - 1].language].TrashGKKickMessage + date, kickTypes.trash);
             }
         }
 
@@ -1204,6 +1274,13 @@ class roomObject {
             }
         }
 
+        this.updateAdmins = () => {
+            var availablePlayers = _roomObject.players().filter(p => p != null);
+            if (availablePlayers.length == 0) return;
+            if (_roomObject.players().find(p => p.admin == true) != null) return;
+            room.setPlayerAdmin(availablePlayers[0].id, true);
+        }
+
         this.votePlayerForPenalizing = (player, message) => {
             var availablePlayers = _roomObject.players().filter(p => p.id != lastChampion.id && p.admin == false && _playerObject.isJoinTimeEnough(p, enoughTime) == true);
 
@@ -1266,7 +1343,7 @@ class roomObject {
             }
 
             if (!isNaN(idToBan)) {
-                if (availablePlayers.length >= 4) {
+                if (availablePlayers.length >= enoughPlayers) {
                     if (_playerObject.isJoinTimeEnough(player, enoughTime) == true) {
                         if (playerList[player.id - 1].votedIds.includes(idToBan) == false) {
                             for (var i = 0; i < availablePlayers.length; i++) {
@@ -1381,6 +1458,10 @@ class roomObject {
                 _roomObject.freeze();
                 _roomObject.isDelayingKickOff();
                 _roomObject.isKickOnTimeLimit();
+                _playerObject.clearSpeedsInDangerZone();
+                _playerObject.pushSpeedsInDangerZone();
+                _roomObject.isPlayerInDangerZone();
+                _roomObject.isPlayerSlowingDown();
             }
             _roomObject.isBallTouched();
             _roomObject.moveTimer();
@@ -1521,9 +1602,11 @@ class roomObject {
                 }
             }
             else {
-                room.sendAnnouncement("💬 (" + new Date().toLocaleTimeString() + ") " + player.name + " [" + player.id + "]: " + message, null, 0xFFFFFF, "normal", 1);
+                room.sendAnnouncement("💬 (" + new Date().toLocaleTimeString() + ") " + player.name + " [" + player.id + "]: " + message, null, messageColors.civil, messageFonts.civil, messageSounds.civil);
                 return false;
             }
+
+            changeFontColorIfAdmin(player, message);
         }
 
         this.onPlayerJoin = (player) => {
@@ -1561,7 +1644,7 @@ class roomObject {
                 room.kickPlayer(player.id, locales[locale].StartEndBlankCharacterKickMessage, kickTypes.characterValidity);
             }
 
-            if (_roomObject.isDuplicatedAuth(player.auth) == true) {
+            /*if (_roomObject.isDuplicatedAuth(player.auth) == true) {
                 var second = playerList.find(p => playerList[p.id - 1].auth == player.auth).name;
                 room.kickPlayer(player.id, locales[locale].DuplicatedAuthKickMessage + second, kickTypes.duplicate);
             }
@@ -1571,14 +1654,17 @@ class roomObject {
                 room.kickPlayer(player.id, locales[locale].DuplicatedConnKickMessage + second, kickTypes.duplicate);
             }
 
-            if (_roomObject.isDuplicatedAuth(player.name) == true) {
+            if (_roomObject.isDuplicatedName(player.name) == true) {
                 room.kickPlayer(player.id, locales[locale].DuplicatedNameKickMessage, kickTypes.duplicate);
-            }
+            }*/
 
             _playerObject._initPlayer(player);
             _playerObject.isBlacklisted(player);
+            _roomObject.checkIfEnoughPlayers();
 
             room.sendAnnouncement(locales[playerList[player.id - 1].language].WelcomeMessage, player.id, messageColors.welcome, messageFonts.welcome, messageSounds.welcome);
+            _roomObject.betaTestAnnouncement();
+            //_roomObject.updateAdmins();
         }
 
         this.onPlayerKicked = (kickedPlayer, reason, ban, byPlayer) => {
@@ -1590,7 +1676,6 @@ class roomObject {
                     console.log(new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + "." + new Date().getMilliseconds() + " ⛔️ " + kickedPlayer.name + " [" + kickedPlayer.id + "] was banned (" + reason + ")");
 
                     _roomObject.blackList(kickedPlayer, reason, ban, byPlayer);
-                    console.log(ban);
                 }
             }
             else if (byPlayer != null) {
@@ -1601,7 +1686,6 @@ class roomObject {
                     console.log(new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + "." + new Date().getMilliseconds() + " ⛔️ " + kickedPlayer.name + " [" + kickedPlayer.id + "] was banned by " + byPlayer.name + " [" + byPlayer.id + "] (" + reason + ")");
 
                     _roomObject.blackList(kickedPlayer, reason, ban, byPlayer);
-                    console.log(ban);
                 }
             }
         }
@@ -1664,6 +1748,7 @@ class roomObject {
             }
 
             _roomObject.deletePlayer(player.id);
+            //_roomObject.updateAdmins();
         }
 
         this.onPlayerTeamChange = (changedPlayer, byPlayer) => {
@@ -1785,7 +1870,9 @@ class roomObject {
         this.onTeamVictory = function (scores) {
             if (scores.red > scores.blue) {
                 console.log(new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + "." + new Date().getMilliseconds() + " 🏅 Victory! Red team wins! 🔴");
-                _roomObject.kickTrashGK(_roomObject.team_blue()[0]);
+                var GK = _roomObject.team_blue()[0];
+                _roomObject.kickTrashGK(GK);
+                setTimeout(() => _playerObject.remove_penalty(playerList[GK.id - 1]), penalizeDuration);
             }
             else {
                 console.log(new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + "." + new Date().getMilliseconds() + " 🏅 Victory! Blue team wins! 🔵");
