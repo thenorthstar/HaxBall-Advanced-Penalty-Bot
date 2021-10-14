@@ -396,3 +396,33 @@ Like as in every bot controlled rooms, our room has some commands which the play
 ### Special Command
 
 Of course we have special command which a player is able to use when he/she became the champion. In this situation, our command is directly a parameter as its own. So, a player ID should be present to make someone kicked from the room. Do not forget that one cannot vote himself/herself or administrator(s) or someone who is not in the room. Also, do not forget that the protection level of the players who have a score which is greater than zero is just decreased with player stays alive in the room. Typing 0 immediately finishes to session whereas typing nothing for a certain time (default: 10 seconds) again finishes the session.
+
+In most situations, commands will help you at all, that is, you will not have to manipulate things through the console panel but you will also be able to modify things through the console without crashing the room. For example, the slow mode duration is 5 seconds (5000 ms) as its default but you may want to change it to another value; or you may want to change enough player amounts to start for a new game or ban someone by vote or etc. All these can be manipulated by console panel. This also gets the user rid of editing whole a function for a small change. Now let's see the *voteban* section after explaining the commands.
+
+## Voteban
+
+As we told above, players may want to ban riotous players. Now there helps us a voteban function. It helps us voting them by typing their ID with its command and they are banned if their votes reach to a certain amount (default: the half of the max room capacity). But voteban has some rules itself and that's why the players may not always able to vote others. For example one cannot vote another if there are less than certain amount of players (default: 4 players) in the room. Now let's list all the rules for voteban:
+
+* Voteban function doesn't work if there are less than certain amount of players (default: 4 players) in the room.
+* You cannot vote yourselves.
+* You cannot vote administrators.
+* You cannot vote a player more than once.
+* You cannot vote a player who isn't in the room.
+* You cannot vote anyone in the room if you are in the room less than a certain time (default: 5 minutes).
+* Also, voteban function should not to be used arbitrarily to ban someone who is innocent (this is also be listed on *warnings*).
+
+After explaining voteban rules, now we are going to explain the warnings for users and players who will be join the room.
+
+# Warnings
+
+Of course, we have some warnings to users and players, after completing all the sections. So, first of all, we have to indicate that this room is implemented for conscious people. So, please do not download the scripts or do not join the rooms which are opened with the scripts on the link if you are not a conscious person. Frankly, we think that nobody wants to fight with unconscious and riotous players, either in the room or at another place. So, let's give a list what the users and players must care about:
+
+* Copyrights of all the scripts belong to the developer (thenorthstar). So you cannot sell these scripts to anyone with a cost or cannot share at anywhere without showing/indicating the source.
+* Be conscious of this bot is not developed for the developer's own server, so don't ask for any help apart from GitHub (e.g. Discord).
+* The developer is not responsible for any errors on the different versions of code, is just responsible for only the original code which you can see on the link.
+* Please feel free with modifying the script on your device, of course the developer cannot intervene what you are doing with the script at all, after publishing it.
+* And please be careful when changing the scripts, especially the functions. Anyway, as we told before, you will not have to change them at all, just you may want to change the global variables which you can see at the top the scripts.
+* Please do not move/mute/kick/ban/vote players arbitrarily, let you have a reason to do these operations.
+* Also, blacklist function is essentially for 7/24 rooms, rather than temporary rooms. So, you can remove all the related stuff about it if you don't want to use.
+* As we explained before, administration is either moved by inheritance or get by code; or there can be no administration. This is completely up to the user.
+* Please do not ask for any further implementations to the developer. Because these scripts already will be in development, even though it is published. Or if you are looking for new implementations too much, please develop what you want yourself. Because both the developer doesn't must do new codes for you and JavaScript is easy to learn.
