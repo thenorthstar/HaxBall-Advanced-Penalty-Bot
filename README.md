@@ -350,3 +350,49 @@ Of course, all these functions must to be invoked on some events, that's why we 
 **`onTeamGoal(team : int) : void`**: Is invoked immediately after a goal is scored. If the team is red, then the *goals* of the player is increased but blue, then the last player who is able to shoot will be eliminated by the reason of miss.
 
 **`onTeamVictory(scores : scoresObject) : void`**: Is invoked if the one of its **scoreLimit** or the **timeLimit** properties is reached. If red team reaches to the victory, then the blue team which also means the goal keeper is kicked as a trash GK and penalized for a certain time. But if the blue team wins, then the whole red team players are warned with a message which says they are trash players.
+
+As we told on the **playerObject** section, **please** do not manipulate the room with this functions directly through the console panel. Because we have implemented a lot of commands for your use. Now let's take a look at these commands.
+
+## Commands
+
+Like as in every bot controlled rooms, our room has some commands which the players see the things or manage the room. Of course, a users who is interested in programming can easily understand which scenario requires what amount of parameters a function should have. Therefore we have separated the commands into different sets according to the amount of their functions' parameters. In our room, most of the functions have one parameters whereas a few ones have two parameters and the rest have more parameters. So, this difference leads us to separate the commands as well like functions by amount of the parameters as well as who can use them. Now, let's take a look at them:
+
+### Commands with no Parameters
+
+**!admin**: Get admin rights if no admins present.
+**!allblue**: Moves everybody to the blue team (admin only).
+**!allred**: Moves everybody to the red team (admin only).
+**!allspec**: Moves everybody to spectators (admin only).
+**!bb**: Leave the room.
+**!blacklist**: Shows the blacklist with **name**, **auth** and **conn**, respectively (admin only).
+**!best**: Shows the statistics of the player whose goals at most (either in the room or not).
+**!cpw**: Clears the current password (admin only).
+**!dc**: Shows the discord link of the host (if no links present, then returns empty string).
+**!discord**: Same of **!dc**.
+**!en**: Switch language to English.
+**!help**: Shows the list of all commands.
+**!joinhistory**: Shows your joining history.
+**!mute**: Shows the list of the players (with their name and ID) who are able to be muted (admin only).
+**!muteall**: Mutes everyone who doesn't have admin rights (admin only).
+**!mutelist**: Shows the list of muted players.
+**!pw**: Sets a random password of a certain length (default length: 30 characters) (admin only).
+**!rank**: Shows your statistics.
+**!tr**: Switch language to Turkish.
+**!unmuteall**: Unmutes everyone who was muted by **!muteall** (admin only).
+**!vote**: Shows the list of the players (with their name and ID) who are able to be voted.
+
+### Commands with one Parameter
+
+**!voteban (ID)** Vote the player with the given ID. Details on the *voteban* section.
+
+### Commands with two Parameters
+
+**!mute (ID) (minutes)**: Mutes the player with given ID for the given certain time. At least 1 minute, at most 10 minutes are available.
+
+### Commands with three Parameters
+
+**!clearban (name) (auth) (conn)**: Clears the ban of the given **name**, **auth** or **conn**. If only one parameter is present, then clears the ban of the players who have that parameter as **name**, **auth** or **conn**. For example: **!clearban thenorthstar** deletes all the players whose name is **thenorthstar**, from blacklist. The logic for **auth** and **conn** is the same. Also the logic for two parameters is the same with logic here.
+
+### Special Command
+
+Of course we have special command which a player is able to use when he/she became the champion. In this situation, our command is directly a parameter as its own. So, a player ID should be present to make someone kicked from the room. Do not forget that one cannot vote himself/herself or administrator(s) or someone who is not in the room. Also, do not forget that the protection level of the players who have a score which is greater than zero is just decreased with player stays alive in the room. Typing 0 immediately finishes to session whereas typing nothing for a certain time (default: 10 seconds) again finishes the session.
