@@ -306,3 +306,34 @@ As an advanced room, it is able to understand what players are doing, what going
 **`voteBanList(player : playerObject) : void`**: Gets the list of players who are able to be banned by vote. Note that administrators cannot be voted.
 
 **`votePlayerForBan(player : playerObject, message : string) : void`**: The player what another players typed as an ID is counted as voted and that means the amount of the votes given to him is increased. If reaches to a certain amount (default: a half of the max capacity of the room), then that player will be banned.
+
+Of course, all these functions must to be invoked on some events, that's why we are using event handlers which the HaxBall Headless API provides for us. Now, let's take a look at them and how they are working.
+
+**`onGamePause(byPlayer : playerObject) : void`**: Is invoked when the game is paused.
+
+**`onGameStart(byPlayer : playerObject) : void`**: Is invoked when a game is started. After this event handler was called, the first player of the red team is made able to shoot with a red arrow which appears behind him. In the same time, a countdown starts to count the time remaining for the player to kick. The turn is inherited according to the order of the red players on the lobby. That is, the turn doesn't advance from the topmost player to the most bottom player.
+
+**`onGameStop(byPlayer : playerObject) : void`**: Is invoked when a game is stopped. This event is mostly invoked after a game is finished and a player becomes able to make someone kicked from the room as a champion.
+
+**`onGameTick() : void`**: Is invoked 60 times per a second when the game is running and makes us able to detect miscellanous situations in the game. Users should be very careful when using this function because of smallest error (for example: bot is trying to find the ID of an uncertain player) in the function which this event uses will crash the room.
+
+**`onGamePause(byPlayer : playerObject) : void`**: Is invoked when the game is unpaused.
+
+**`onKickRateLimitSet(min : int, rate : int, burst : int, byPlayer : playerObject)`**: Is invoked when kick rate is changed and is effective to prevent players to use macro to shoot faster.
+
+**`onPlayerActivity(player : playerObject) : void`**: Is invoked when player presses a key or typing something on chat. Note that continuous presses on keyboard doesn't mean a sign of activity in the scope of the HaxBall Headless API. This event handler is also effective to detect AFK players but is currently inactive in our scripts. However, you are free the change it.
+
+**`onPlayerAdminChange(changedPlayer : playerObject, byPlayer : playerObject) : void`**: Is invoked when a player is given admin rights or its admin rights taken. As default, our room prevents more than one players to be admin in the same time but you are free to change this.
+
+**`onPlayerBallKick(player : playerObject) : void`**: Is invoked when a ball whose **cGroup** contains **kick** is kicked. This also means that the shoot is performed and stops the countdown.
+
+**`onPlayerChat(player : playerObject, message : string) : void`**: Is invoked when a player types something on the chat. Possibly used to detect AFK players.
+
+**`onPlayerJoin(player : playerObject) : void`**: Is invoked when a player joins the room. Player properties are also initialized on this event handler.
+
+**`onPlayerKicked(kickedPlayer : playerObject, reason : string, ban : bool, byPlayer : playerObject) : void`**: Is invoked when a player is kicked/banned. If ban becomes true, player will be blacklisted with the given **reason** and the name of **kickedPlayer** and the current date.
+
+**`onPlayerLeave(player : playerObject) : void`**: Is invoked when a player joins the room. If the player who is able to shoot leaves the game, then the turn is advanced to the next player; or if the blue player leaves the game, then a random player is chosen from the rest and a new game is started if there are enough players (default: 5 players).
+
+**`onPlayerTeamChange(changedPlayer : playerObject, byPlayer : playerObject) : void`**: Is invoked when a player is moved from a team to another team. In our scripts, we haven't implemented anything apart from logging what going is but you are free to edit there. But don't forget that the move players to teams arbitrarily while a game is running. This is will also explained on the *warnings* section.
+
