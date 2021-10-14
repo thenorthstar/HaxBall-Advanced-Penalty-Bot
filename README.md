@@ -285,4 +285,24 @@ As an advanced room, it is able to understand what players are doing, what going
 
 **`showScoreOnAvatar(player : playerObject) : void`**: Puts players' scores on their avatar after start, reset or elimination.
 
+**`sort_ids() : object`**: Sorts the **playerList** (which should not to be confused with **room.getPlayerList()**) with respect to the ID of the players.
+
+**`sort_ranks() : object`**: Sorts the **ranks** with respect to the goals property of the players. In this point, we have to explain something important. There are two different lists for players and ranks because of the **sort()** function of JavaScript changes the sort of the original **playerList** and this leads the turn to fall in a lock (and this leads the players to be desynchronized).
+
+**`startTimer() : void`**: Starts the countdown bar.
+
+**`startVoteSession(player : playerObject) : void`**: Starts the vote session for the champion of the current game. At the end, the player whose ID is equal to the number given by the champion will be kicked (or its protection level is decreased) from the room. If the champion types zero or doesn't type anything in a certain time (default: 10 seconds), then is counted as don't use of right and a new game is started if there are enough players in the room.
+
+**`stopTimer() : void`**: Stops the countdown bar.
+
 **`unmuteAll() : void`**: Unmutes all the players muted by **muteAll()**. Having admin rights is a must.
+
+**`updateAdmins() : void`**: It's another one of the admin rights functions of the room. This function moves administration by inheritance, which means a player is given admin rights if there's administrators in the room. Invoked after **room.onPlayerJoin** and **room.onPlayerLeave** event handlers.
+
+**`votePlayerForPenalizing(player : playerObject, message : string) : void`**: When the champion types something in vote session, this function is invoked and related player is kicked as we told above.
+
+**`voteBan(player : playerObject) : void`**: Bans the player with a message (and puts it in blacklist).
+
+**`voteBanList(player : playerObject) : void`**: Gets the list of players who are able to be banned by vote. Note that administrators cannot be voted.
+
+**`votePlayerForBan(player : playerObject, message : string) : void`**: The player what another players typed as an ID is counted as voted and that means the amount of the votes given to him is increased. If reaches to a certain amount (default: a half of the max capacity of the room), then that player will be banned.
