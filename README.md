@@ -13,6 +13,8 @@ Advanced penalty bot is a JavaScript based HaxBall bot which is developed by rev
 
 Of course, our bot is not an ordinary penalty shootout bot. That is, it has a lot of extras from an ordinary penalty bot. For example, a red arrow appears when a player is able to kick the ball (whereas the system freezes who anyone else moves). In the same, a timer counts the remaining time of the player for kicking the ball. (1.1)
 
+Image 1.1 (A red arrow appears behind the player and countdown starts)
+
 ![1 1](https://user-images.githubusercontent.com/68077608/137155704-8170d052-5546-4b8a-a25b-a767e4e54ab3.PNG)
 
 Is it the end? Of course, not. The most interesting and different ones are yet to come:
@@ -63,9 +65,15 @@ As in the most of the games, player is the main object of this game as well. So 
 
 The above are the properties of the player. Also, because of the player is a class, rather than an object, it has a lot of functions for changing that properties.
 
+Image 2.1 (A blacklisted player is trying to join the room)
+
 ![2 1](https://user-images.githubusercontent.com/68077608/137157658-5141690c-d8e1-4be0-bde5-509fa7d7751b.PNG)
 
+Image 2.2 (The developer is seeing his joining history. But in fact, that joining dates will not be that much near to each other as you appreciate)
+
 ![2 2](https://user-images.githubusercontent.com/68077608/137157682-7a5fb0f9-94d4-4ae9-9135-438e314fb334.PNG)
+
+Image 2.3 (A player votes another one, if voted that one before, is warned with deny message)
 
 ![2 3](https://user-images.githubusercontent.com/68077608/137159166-58ab437b-56a8-4f08-a32a-4f37f1ab17f2.PNG)
 
@@ -132,3 +140,93 @@ After player's properties, let's move to functions of the player class:
 **`removeSlowMode(auth : string) : void`**: Removes the given auth from the slow mode list after the certain time is expired.
 
 **`remove_penalty(player : playerObject) : void`**: Removes the auth from the given player, from penalty list.
+
+**`resetVotes(player : playerObject) : void`**: In our version, this function is currently deactivated but you can activate it after downloading the scripts.
+
+**`switchLanguageToTurkish(player : playerObject) : void`**: Changes the given player's language to Turkish.
+
+**`switchLanguageToEnglish(player : playerObject) : void`**: Changes the given player's language to English.
+
+**`unmutePlayer(player : playerObject) : void`**: Unmutes the given player (its auth will be removed from mute list).
+
+Image 2.4 (The danger zone in yellow rectangle, of course you will not see this rectangle)
+
+![2 4](https://user-images.githubusercontent.com/68077608/137291190-356ce006-a174-4081-8d33-07739150a9c6.PNG)
+
+That's all for **playerObject** for now. Before finishing this section let's remind that don't manipulate the room via this functions through the console panel as much as possible. *Commands* will resolve your problem already. Now, let's move to the **roomObject** section.
+
+# _roomObject
+
+This is where the game and players take place as you know. So, like as the **playerObject** class, this class has also some functions like it, but also doesn't have distinguishing properties unlike the player. Because there is only one room as you appreciate. Anyway, let's get started to explain the room's functionality.
+
+As an advanced room, it is able to understand what players are doing, what going is in it, more than other rooms as expected. So, we have implemented a lot of functions to make the room gains that ability. For example, player move detectors, vote functions, eliminations and etc. Now, we are going to look the functions:
+
+**`players() : object`**: This one sorts the players according to ID and gets the sorted list. And is the one of the most used functions of the room.
+
+**`team_spec() : object`**: Gets the players who are in spectators.
+
+**`team_red() : object`**: Gets the players who are in the red team.
+
+**`team_blue() : object`**: Gets the players who are in the blue team.
+
+**`advanceTurn() : void`**: Advances the turn when a player performs their shoot. Is invoked after **room.onGameStart**, **room.onPositionReset** event handlers and elimination.
+
+**`blackList(kickedPlayer : playerObject, reason : string, ban : bool, byPlayer : playerObject) : void`**: As careful players care, it is invoked after **room.onPlayerKicked** event handler when ban is true.
+
+**`champion(player : playerObject) : void`**: This function is invoked when a player is the winner of the final kick. (3.1)
+
+**`changeFontColorIfAdmin(player : playerObject) : void`**: Administrators are able to type messages with bold and different color type.
+
+**`checkEnd() : void`**: After all the steps at the first section end. This function is invoked and a new game starts if there are enough players.
+
+**`checkIfEnoughPlayers() : void`**: A new game is started if there are enough players. Of course there should not be game which is currently running.
+
+**`clearAllAvatars() : void`**: Players' score will be shown on their avatars after **room.onGameStart**, **room.onPositionReset** event handlers and elimination, this function is invoked a certain time after the above functions were invoked. (3.2)
+
+**`clear_password(player : playerObject) : void`**: We are getting slowly moving the crucial functions of the **roomObject**. And this one is the first of them. But how? As you can see, this function has a *playerObject* typed argument which checks if the given player is admin or not. Of course, a player should not have authorization for setting/removing passwords in room unless they were admin.
+
+**`deletePlayer(id : int) : void`**: This function is invoked after the **room.onPlayerLeave** event and *_playerObject.isInTheRoom* becomes **false**.
+
+**`eliminate(player : playerObject) : void`**: A red player is eliminated either if spends the time unnecessarily or misses his shoot or slows down in the danger zone, or time is expired even though there's a kick. Also, player will be warned with a message about his elimination. (2.4)
+
+**`fillIndicators() : void`**: This function is invoked immediately after the room was set (**room.onRoomLink** event handler). Indicators are the rank of the discs at the corners of the numbers which you see on the countdown.
+
+**`findActivePlayer() : playerObject`**: This is another one of the most important functions of the **roomObject**. Finds the player who is able to shoot and gets its information.
+
+**`freeze() : void`**: As we told above, there is an active player whereas there are inactive players. These inactive players (players who are unable to shoot) are frozen in a smallest move.
+
+**`get_admin(player : playerObject) : void`**: This function is one of the miscellanous admin functions which we provided to our users. So, players can get their admin rights either by code or by inheritance. Or there can be no admin rights for public users. This is completely up to the user. In this function, player gets its admin rights by typing code which we explained on the *commands* section.
+
+**`get_admins() : object`**: This function gets the list of the player(s) who is/are in the administration. As default, it can be either one player or nobody.
+
+**`get_best(player : playerObject) : void`**: Gets the statistics of the player whose goals are at most, either in the room or not.
+
+**`get_blacklist(player : playerObject) : void`**: Gets the blacklisted players' informations. Having admin rights is a must to see this.
+
+**`get_commands(player : playerObject) : void`**: Gets the list of commands.
+
+**`get_discord(player : playerObject) : void`**: Gets your discord link. If no link is provided, returns empty string.
+
+**`get_joinHistory(player : playerObject) : void`**: Gets the joining history of the player. Different names with same **auth** or **conn** will be listed in the same history.
+
+**`get_rank(player : playerObject) : void`**: Gets the statistics of the player.
+
+**`getRandomInt(number : int) : int`**: Gets a random integer between zero and the given integer value (that value will not be included, for example: **getRandomInt(25)** returns an integer value between 0 and 24)
+
+**`getRandomString(length : int) : string`**: Gets a random string in the set of letters of the English alphabet (either lower or upper case) and digits (from 0 to 9). We are going to use this function to set a random password for our room.
+
+**`isBallTouched() : bool`**: Checks if the ball is touched or not.
+
+**`isCommand(command : string) : bool`**: Checks if the given command is command for a function with one parameter.
+
+**`isCommand2(command : string) : bool`**: Checks if the given command is command for a function with two parameters.
+
+**`isCommand4(command : string) : bool`**: Checks if the given command is command for a function with four parameters.
+
+**`isDelayingKickOff() : void`**: Checks if the active player (player who is able to shoot) is spending time unnecessarily or not. Player will be eliminated if 10 seconds passed without any shoots. This is also effective to eliminate AFK players.
+
+**`isDuplicatedAuth(auth : string) : bool`**: Checks if the **auth** of the player is used by another player in the room. This is effective to detect the players who are abusing the room by joining multiple times. But as a disadvantage, it is not effective to prevent multiple joins from the same player with different **auth**s if there's no check for **conn**. Invoked on **room.onPlayerJoin** event handler as you appreciate.
+
+**`isDuplicatedAuth(conn : string) : bool`**: Checks if the **conn** of the player is used by another player in the room. This is effective to detect the players who are abusing the room by joining multiple times. But as a disadvantage, prevents different players on the same network to join the room. Invoked on **room.onPlayerJoin** event handler as you appreciate.
+
+**`isDuplicatedName(name : string) : bool`**: Checks if the **name** of the player is used by another player in the room. This is effective to detect the players who are abusing the room by joining multiple times, and also effective to detect fake name usages. Invoked on **room.onPlayerJoin** event handler as you appreciate.
