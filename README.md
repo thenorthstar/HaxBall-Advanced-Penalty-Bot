@@ -161,6 +161,8 @@ This is where the game and players take place as you know. So, like as the **pla
 
 As an advanced room, it is able to understand what players are doing, what going is in it, more than other rooms as expected. So, we have implemented a lot of functions to make the room gains that ability. For example, player move detectors, vote functions, eliminations and etc. Now, we are going to look the functions:
 
+## Functions
+
 **`players() : object`**: This one sorts the players according to ID and gets the sorted list. And is the one of the most used functions of the room.
 
 **`team_spec() : object`**: Gets the players who are in spectators.
@@ -309,6 +311,8 @@ As an advanced room, it is able to understand what players are doing, what going
 
 Of course, all these functions must to be invoked on some events, that's why we are using event handlers which the HaxBall Headless API provides for us. Now, let's take a look at them and how they are working.
 
+## Event Handlers
+
 **`onGamePause(byPlayer : playerObject) : void`**: Is invoked when the game is paused.
 
 **`onGameStart(byPlayer : playerObject) : void`**: Is invoked when a game is started. After this event handler was called, the first player of the red team is made able to shoot with a red arrow which appears behind him. In the same time, a countdown starts to count the time remaining for the player to kick. The turn is inherited according to the order of the red players on the lobby. That is, the turn doesn't advance from the topmost player to the most bottom player.
@@ -337,3 +341,12 @@ Of course, all these functions must to be invoked on some events, that's why we 
 
 **`onPlayerTeamChange(changedPlayer : playerObject, byPlayer : playerObject) : void`**: Is invoked when a player is moved from a team to another team. In our scripts, we haven't implemented anything apart from logging what going is but you are free to edit there. But don't forget that the move players to teams arbitrarily while a game is running. This is will also explained on the *warnings* section.
 
+**`onPositionsReset() : void`**: Is invoked a certain time after a goal is scored. The turn is advanced to a new player in the red team with a red arrow appears it and the countdown starts.
+
+**`onRoomLink(url : string) : void`**: As default, this event handler is invoked after the room is set but in the hosts with slow connections, maybe invoked more than once. In the first time of invoke, the arrays for indicators are filled for countdown.
+
+**`onStadiumChange(newStadiumName : string, byPlayer : playerObject) : void`**: Is invoked after a stadium is loaded. As default, administrators are not allowed to change the stadium.
+
+**`onTeamGoal(team : int) : void`**: Is invoked immediately after a goal is scored. If the team is red, then the *goals* of the player is increased but blue, then the last player who is able to shoot will be eliminated by the reason of miss.
+
+**`onTeamVictory(scores : scoresObject) : void`**: Is invoked if the one of its **scoreLimit** or the **timeLimit** properties is reached. If red team reaches to the victory, then the blue team which also means the goal keeper is kicked as a trash GK and penalized for a certain time. But if the blue team wins, then the whole red team players are warned with a message which says they are trash players.
