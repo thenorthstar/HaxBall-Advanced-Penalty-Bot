@@ -83,7 +83,7 @@ After player's properties, let's move to functions of the player class:
 
 **`findOlderVotes(player : playerObject) : int`**: Finds the player's older votes, that is the amount of the votes given to their older accounts.
 
-**`hasDoubleBlanks(string : string) : bool`**: Checks if the player has multiple blanks in their nickname. For example: **THIS  IS A MULTIPLE  BLANKED  NICKNAME**
+**`hasDoubleBlanks(string : string) : bool`**: Checks if the player has multiple blanks in their nickname.
 
 **`hasInvalidCharacters(string : string) : bool`**: Checks if the player has invalid characters in their nickname. For example: Chinese characters.
 
@@ -92,3 +92,43 @@ After player's properties, let's move to functions of the player class:
 **`hasTooShortName(length : int, string : string) : bool`**: Checks if the player has a name whose length is shorter than a certain value.
 
 **`increaseBadWordUsage(player : playerObject) : int`**: Increases the bad word usage of the player if any message of the player is profane.
+
+**`increaseGoals(player : playerObject) : void`**: Increases the goals of the player.
+
+**`increaseScore(player : playerObject) : void`**: Increases the score (that is, the amount of its championships) of the player.
+
+**`increaseVotes(player : playerObject) : void`**: Increases the amount of votes given to the player.
+
+**`isAdmin(player : playerObject) : bool`**: Checks if the player is admin or not.
+
+**`isBlacklisted(player : playerObject) : void`**: Checks if the player is blacklisted or not. If true, player will be banned with an information message.
+
+**`isEqualToPlayerID(id : int, message : string) : bool`**: Checks if the message is equal to given ID.
+
+**`isInTheRoom(id : int) : bool`**: Checks if the player is in the room.
+
+**`isJoinTimeEnough(player : playerObject, time : int) : bool`**: Checks if the player is in the room for more than a certain time.
+
+**`isMoving(player : playerObject) : bool`**: Checks if the player is moving or not.
+
+**`isMuted(player : playerObject) : bool`**: Checks if the player is muted or not.
+
+**`isPenalized(player : playerObject) : bool`**: Checks if the player is penalized (kicked by vote of the champion or as trash GK) or not.
+
+**`isStartingOrEndingWithBlankCharacter(string : string) : bool`**: Checks if the player has blank characters at the left or right of its nickname.
+
+**`mutePlayer(player : playerObject) : void`**: Mutes the given player (its auth will be moved to mute list).
+
+**`passiveTurn(player : playerObject) : void`**: Makes the player unable to shoot.
+
+**`penalize(player : playerObject) : void`**: Penalizes the player (its auth will be moved to penalty list which should not to be confused with the blacklist).
+
+**`pushSlowMode(auth : string) : void`**: When a player types something on the chat, its auth will be moved to slow mode list for 5 seconds, and then removed from there.
+
+**`pushSpeedsInDangerZone(player : playerObject)`**: Pushs the speed of the player if he/she is in the danger zone. (2.4)
+
+**`removeBlacklist(player : playerObject, name : ?string, auth : ?string, conn : ?string) : void`**: This is a critical function because of most of players will confuse to how to use this function as a command and wants to know how it works. Now, as a briefly explanation; at least one parameter apart from the obligatory *player* parameter is enough to do some changes in blacklist. The rest is explained detailedly on *commands*.
+
+**`removeSlowMode(auth : string) : void`**: Removes the given auth from the slow mode list after the certain time is expired.
+
+**`remove_penalty(player : playerObject) : void`**: Removes the auth from the given player, from penalty list.
