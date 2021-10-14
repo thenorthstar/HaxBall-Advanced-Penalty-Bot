@@ -230,3 +230,59 @@ As an advanced room, it is able to understand what players are doing, what going
 **`isDuplicatedAuth(conn : string) : bool`**: Checks if the **conn** of the player is used by another player in the room. This is effective to detect the players who are abusing the room by joining multiple times. But as a disadvantage, prevents different players on the same network to join the room. Invoked on **room.onPlayerJoin** event handler as you appreciate.
 
 **`isDuplicatedName(name : string) : bool`**: Checks if the **name** of the player is used by another player in the room. This is effective to detect the players who are abusing the room by joining multiple times, and also effective to detect fake name usages. Invoked on **room.onPlayerJoin** event handler as you appreciate.
+
+**`isKickOnTimeLimit() : void`**: Checks if a certain time is passed after the shoot. If no scores are happened in that time, then the player is eliminated.
+
+**`isLink(string : string) : bool`**: Checks if what player typed is link or not. If true, player is warned about link spamming and message doesn't be shown on chat for protecting others from harmful links and potential cyber attacks.
+
+**`isPlayerInDangerZone(player : playerObject) : bool`**: Checks if the player is in the yellow rectangle or not. This makes us able to detect players who are slowing down before shooting. (2.4)
+
+**`isPlayerSlowingDown(player : playerObject) : void`**: Checks if the player in the danger zone is slowing down or not. The division of sequential speeds is less than or equal than damping means player is slowing down and player is eliminated. (3.3)
+
+**`isProfane(string : string) : bool`**: Checks if any content in messages of players is profane. If true, the player is warned about bad word usage, three times warning means ban and therefore blacklist.
+
+**`isTrashGK(player : playerObject) : bool`**: Checks if the player is scored at an amount of goals greater than or equal to a certain number. If true, player is kicked and penalized for a certain time (default: 5 minutes).
+
+**`justSendToAdmins(player : playerObject, message : string) : void`**: Sometimes players may be muted for some reason by the administration and administrators may want to see players' messages even though they were muted.
+
+**`kickTrashGK(player : playerObject) : void`**: Players who are marked as trash GK are kicked and penalized for a certain time (default: 5 minutes). Then a new game is started if there are enough players (default: 4 players).
+
+**`loadMap(map : object, scoreLimit : int, timeLimit : int)`**: Loads the given map object and sets the score and time limits with the given parameters.
+
+**`_moveAllToSpec() : void`**: Moves all the players to spectators. Is bot automated.
+
+**`_moveAllToRed() : void`**: Moves all the players to the red team. Is bot automated.
+
+**`_moveAllToBlue() : void`**: Moves all the players to the blue team. Is bot automated.
+
+**`moveAllToSpec(player : playerObject) : void`**: Moves all the players to spectators. Is player controlled and having admin rights is a must.
+
+**`moveAllToRed(player : playerObject) : void`**: Moves all the players to the red team. Is player controlled and having admin rights is a must.
+
+**`moveAllToBlue(player : playerObject) : void`**: Moves all the players to the blue team. Is player controlled and having admin rights is a must.
+
+**`moveTimer() : void`**: Runs the countdown bar from the right to the left.
+
+**`muteAll() : void`**: Mutes all the players apart from the administration. Having admin rights is a must.
+
+**`muteAvailableList() : void`**: Gets the list of available players to mute. Returns empty string if no available players. Having admin rights is a must.
+
+**`muteList() : void`**: Gets the list of muted players. Returns empty string if there are no muted players. Having admin rights is a must.
+
+**`mutePlayer(player : playerObject) : void`**: Mutes a specified player for a certain time on command of the administration. Allowed time range is between 1 minute and 10 minutes. Sanction for mute ends automatically after that certain time, so, users don't must to unmute player on another command.
+
+**`pointDistance(p1 : object, p2 : object) : float`**: Gets the distance between two points.
+
+**`resetIndicators() : void`**: Countdown must be reset after start, reset or elimination.
+
+**`see_off_player(player : playerObject) : void`**: Kicks the player with a see off message. See *commands* section.
+
+**`setArrowPosition() : void`**: Sets the arrow position according the position of the player who is able to shoot.
+
+**`set_password(length : int) : void`**: Sets a random password with the given length by using the **getRandomString()** function.
+
+**`setInitialPosition(player : playerObject, position : object) : void`**: Puts the player to the given position. This is effective to freeze who is moving as an inactive player.
+
+**`showScoreOnAvatar(player : playerObject) : void`**: Puts players' scores on their avatar after start, reset or elimination.
+
+**`unmuteAll() : void`**: Unmutes all the players muted by **muteAll()**. Having admin rights is a must.
