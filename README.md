@@ -359,39 +359,39 @@ Like as in every bot controlled rooms, our room has some commands which the play
 
 ### Commands with no Parameters
 
-**!admin**: Get admin rights if no admins present.
-**!allblue**: Moves everybody to the blue team (admin only).
-**!allred**: Moves everybody to the red team (admin only).
-**!allspec**: Moves everybody to spectators (admin only).
-**!bb**: Leave the room.
-**!blacklist**: Shows the blacklist with **name**, **auth** and **conn**, respectively (admin only).
-**!best**: Shows the statistics of the player whose goals at most (either in the room or not).
-**!cpw**: Clears the current password (admin only).
-**!dc**: Shows the discord link of the host (if no links present, then returns empty string).
-**!discord**: Same of **!dc**.
-**!en**: Switch language to English.
-**!help**: Shows the list of all commands.
-**!joinhistory**: Shows your joining history.
-**!mute**: Shows the list of the players (with their name and ID) who are able to be muted (admin only).
-**!muteall**: Mutes everyone who doesn't have admin rights (admin only).
-**!mutelist**: Shows the list of muted players.
-**!pw**: Sets a random password of a certain length (default length: 30 characters) (admin only).
-**!rank**: Shows your statistics.
-**!tr**: Switch language to Turkish.
-**!unmuteall**: Unmutes everyone who was muted by **!muteall** (admin only).
-**!vote**: Shows the list of the players (with their name and ID) who are able to be voted.
+* **!admin**: Get admin rights if no admins present.
+* **!allblue**: Moves everybody to the blue team (admin only).
+* **!allred**: Moves everybody to the red team (admin only).
+* **!allspec**: Moves everybody to spectators (admin only).
+* **!bb**: Leave the room.
+* **!blacklist**: Shows the blacklist with **name**, **auth** and **conn**, respectively (admin only).
+* **!best**: Shows the statistics of the player whose goals at most (either in the room or not).
+* **!cpw**: Clears the current password (admin only).
+* **!dc**: Shows the discord link of the host (if no links present, then returns empty string).
+* **!discord**: Same of **!dc**.
+* **!en**: Switch language to English.
+* **!help**: Shows the list of all commands.
+* **!joinhistory**: Shows your joining history.
+* **!mute**: Shows the list of the players (with their name and ID) who are able to be muted (admin only).
+* **!muteall**: Mutes everyone who doesn't have admin rights (admin only).
+* **!mutelist**: Shows the list of muted players.
+* **!pw**: Sets a random password of a certain length (default length: 30 characters) (admin only).
+* **!rank**: Shows your statistics.
+* **!tr**: Switch language to Turkish.
+* **!unmuteall**: Unmutes everyone who was muted by **!muteall** (admin only).
+* **!vote**: Shows the list of the players (with their name and ID) who are able to be voted.
 
 ### Commands with one Parameter
 
-**!voteban (ID)** Vote the player with the given ID. Details on the *voteban* section.
+* **!voteban (ID)** Vote the player with the given ID. Details on the *voteban* section.
 
 ### Commands with two Parameters
 
-**!mute (ID) (minutes)**: Mutes the player with given ID for the given certain time. At least 1 minute, at most 10 minutes are available.
+* **!mute (ID) (minutes)**: Mutes the player with given ID for the given certain time. At least 1 minute, at most 10 minutes are available.
 
 ### Commands with three Parameters
 
-**!clearban (name) (auth) (conn)**: Clears the ban of the given **name**, **auth** or **conn**. If only one parameter is present, then clears the ban of the players who have that parameter as **name**, **auth** or **conn**. For example: **!clearban thenorthstar** deletes all the players whose name is **thenorthstar**, from blacklist. The logic for **auth** and **conn** is the same. Also the logic for two parameters is the same with logic here.
+* **!clearban (name) (auth) (conn)**: Clears the ban of the given **name**, **auth** or **conn**. If only one parameter is present, then clears the ban of the players who have that parameter as **name**, **auth** or **conn**. For example: **!clearban thenorthstar** deletes all the players whose name is **thenorthstar**, from blacklist. The logic for **auth** and **conn** is the same. Also the logic for two parameters is the same with logic here.
 
 ### Special Command
 
