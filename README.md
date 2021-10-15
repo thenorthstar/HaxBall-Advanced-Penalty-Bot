@@ -183,6 +183,8 @@ As an advanced room, it is able to understand what players are doing, what going
 
 **`checkIfEnoughPlayers() : void`**: A new game is started if there are enough players. Of course there should not be game which is currently running.
 
+**`checkIfEnoughPlayersOOnJoin() : void`**: A new game is started if there are enough players. Of course there should not be game which is currently running. Is only invoked when a new player joins.
+
 **`clearAllAvatars() : void`**: Players' score will be shown on their avatars after **room.onGameStart**, **room.onPositionReset** event handlers and elimination, this function is invoked a certain time after the above functions were invoked. (3.2)
 
 **`clear_password(player : playerObject) : void`**: We are getting slowly moving the crucial functions of the **roomObject**. And this one is the first of them. But how? As you can see, this function has a *playerObject* typed argument which checks if the given player is admin or not. Of course, a player should not have authorization for setting/removing passwords in room unless they were admin.
