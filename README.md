@@ -309,6 +309,18 @@ As an advanced room, it is able to understand what players are doing, what going
 
 **`votePlayerForBan(player : playerObject, message : string) : void`**: The player what another players typed as an ID is counted as voted and that means the amount of the votes given to him is increased. If reaches to a certain amount (default: a half of the max capacity of the room), then that player will be banned.
 
+3.1 - A player is being warned after scoring a goal against the goal keeper.
+
+https://thehax.pl/forum/powtorki.php?nagranie=52fd2c0dd555c383a738d629bc00d6d9
+
+3.2 - Score (the amount of championship) of the players is shown on their avatar for a certain time and then is reset to default
+
+https://thehax.pl/forum/powtorki.php?nagranie=7fd4286565e768c76106385e5c0ff344
+
+3.3 - A player is being eliminated due to slowing down
+
+https://thehax.pl/forum/powtorki.php?nagranie=ba114955965b3f3a0c5777bc00c28647
+
 Of course, all these functions must to be invoked on some events, that's why we are using event handlers which the HaxBall Headless API provides for us. Now, let's take a look at them and how they are working.
 
 ## Event Handlers
