@@ -254,6 +254,7 @@ var number_indicators_7 = [];
 var number_indicators_8 = [];
 var number_indicators_9 = [];
 
+var passwordLength = 30;
 var penalizeDuration = 300000;
 var playerAcceleration = JMap.playerPhysics.acceleration;
 var playerDamping = JMap.playerPhysics.damping;
@@ -365,8 +366,8 @@ class playerObject {
             }
         }
 
-        this.isEqualToPlayerID = (player, message) => {
-            return parseInt(message) == player.id;
+        this.isEqualToPlayerID = (id, message) => {
+            return parseInt(message) == id;
         }
 
         this.isInTheRoom = (id) => {
@@ -533,7 +534,7 @@ class roomObject {
 
         this.blackList = (kickedPlayer, reason, ban, byPlayer) => {
             playerList[kickedPlayer.id - 1].isBlacklisted = ban;
-            playerList[kickedPlayer.id - 1].blackListDate = (new Date(Date.now())).toISOString().replace("T", " ").replace("Z", "");
+            playerList[kickedPlayer.id - 1].blackListDate = (new Date(Date.now())).toLocaleString();
             playerList[kickedPlayer.id - 1].blackListReason = reason;
             playerList[kickedPlayer.id - 1].blackListedBy = byPlayer;
         }
@@ -547,18 +548,40 @@ class roomObject {
         this.changeFontColorIfAdmin = (player, message) => {
             if (player.admin == true) {
                 room.sendAnnouncement("💬 (" + new Date().toLocaleTimeString() + ") " + player.name + " [" + player.id + "]: " + message, null, messageColors.admin, messageFonts.admin, messageSounds.admin);
-                return false;
             }
+            else {
+                room.sendAnnouncement("💬 (" + new Date().toLocaleTimeString() + ") " + player.name + " [" + player.id + "]: " + message, null, messageColors.civil, messageFonts.civil, messageSounds.civil);
+            }
+            return false;
         }
 
         this.checkEnd = () => {
             _roomObject.players().filter(p => p.id != lastChampion.id).forEach(p => { room.setPlayerTeam(p.id, teamsEnumerator.red); });
-            room.setPlayerTeam(lastChampion.id, teamsEnumerator.blue);
-            room.startGame();
+
+            if (_playerObject.isInTheRoom(lastChampion.id) == true) {
+                room.setPlayerTeam(lastChampion.id, teamsEnumerator.blue);
+            }
+            else {
+                if (_roomObject.team_blue().length == 0) {
+                    var index = _roomObject.getRandomInt(room.getPlayerList().length);
+                    room.setPlayerTeam(room.getPlayerList()[index].id, teamsEnumerator.blue);
+                }
+            }
+
+            _roomObject.checkIfEnoughPlayers();
         }
 
         this.checkIfEnoughPlayers = () => {
-            if (room.getScores() != null && _roomObject.players().length == enoughPlayersToStartMatch) {
+            if (room.getScores() == null && _roomObject.players().length >= enoughPlayersToStartMatch) {
+                room.startGame();
+            }
+        }
+
+        this.checkIfEnoughPlayersOnJoin = () => {
+            if (room.getScores() == null && _roomObject.players().length >= enoughPlayersToStartMatch && kickSession == false) {
+                var index = _roomObject.getRandomInt(room.getPlayerList().length);
+                _roomObject._moveAllToRed();
+                room.setPlayerTeam(room.getPlayerList()[index].id, teamsEnumerator.blue);
                 room.startGame();
             }
         }
@@ -691,7 +714,7 @@ class roomObject {
         }
 
         this.get_joinHistory = (player) => {
-            var identicals = playerList.filter(p => p.auth == playerList[player.id - 1].auth).map(p => locales[playerList[player.id - 1].language].NameInfoMessage + p.name + ", " + locales[playerList[player.id - 1].language].JoinTimeInfoMessage + (new Date(p.jointime)).toISOString().replace("T", " ").replace("Z", "")).join("\n");
+            var identicals = playerList.filter(p => p.auth == playerList[player.id - 1].auth).map(p => locales[playerList[player.id - 1].language].NameInfoMessage + p.name + ", " + locales[playerList[player.id - 1].language].JoinTimeInfoMessage + (new Date(p.jointime)).toLocaleString()).join("\n");
 
             room.sendAnnouncement(locales[playerList[player.id - 1].language].JoinHistoryInfoMessage + identicals, player.id, messageColors.info, messageFonts.info, messageSounds.info);
             return false;
@@ -1034,7 +1057,7 @@ class roomObject {
         }
 
         this.muteAvailableList = (player) => {
-            var availablePlayers = _roomObject.players().filter(p => p.id != player.id && p.admin == false && _playerObject.isJoinTimeEnough(p, enoughTime) == true && _playerObject.isMuted(p) == false).map(p => p.name + ": [" + p.id + "]").join("\n");
+            var availablePlayers = _roomObject.players().filter(p => p.id != player.id && p.admin == false && _playerObject.isMuted(p) == false).map(p => p.name + ": [" + p.id + "]").join("\n");
 
             if (player.admin == true) {
                 if (availablePlayers.length > 0) {
@@ -1206,7 +1229,7 @@ class roomObject {
 
         this.set_password = (player) => {
             if (player.admin == true) {
-                var password = _roomObject.getRandomString(30);
+                var password = _roomObject.getRandomString(passwordLength);
                 room.setPassword(password);
                 room.sendAnnouncement(locales[playerList[player.id - 1].language].PasswordSetSuccessMessage + password, player.id, messageColors.grant, messageFonts.grant, messageSounds.grant);
                 return false;
@@ -1602,11 +1625,9 @@ class roomObject {
                 }
             }
             else {
-                room.sendAnnouncement("💬 (" + new Date().toLocaleTimeString() + ") " + player.name + " [" + player.id + "]: " + message, null, messageColors.civil, messageFonts.civil, messageSounds.civil);
+                _roomObject.changeFontColorIfAdmin(player, message);
                 return false;
             }
-
-            changeFontColorIfAdmin(player, message);
         }
 
         this.onPlayerJoin = (player) => {
@@ -1620,7 +1641,7 @@ class roomObject {
                 room.kickPlayer(player.id, locales[locale].InvalidCharactersKickMessage, kickTypes.characterValidity);
             }
 
-            if (_playerObject.hasTooShortName(player.name, minNameLength) == true) {
+            if (_playerObject.hasTooShortName(minNameLength, player.name) == true) {
                 room.kickPlayer(player.id, locales[locale].TooShortNameKickMessage, kickTypes.characterLength);
             }
 
@@ -1660,7 +1681,7 @@ class roomObject {
 
             _playerObject._initPlayer(player);
             _playerObject.isBlacklisted(player);
-            _roomObject.checkIfEnoughPlayers();
+            _roomObject.checkIfEnoughPlayersOnJoin();
 
             room.sendAnnouncement(locales[playerList[player.id - 1].language].WelcomeMessage, player.id, messageColors.welcome, messageFonts.welcome, messageSounds.welcome);
             _roomObject.betaTestAnnouncement();
