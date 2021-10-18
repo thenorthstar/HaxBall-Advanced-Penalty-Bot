@@ -1476,7 +1476,7 @@ class roomObject {
 
             _roomObject.players().forEach(p => _playerObject.passiveTurn(p));
 
-            let fname = 'HBReplay' + (new Date()).toISOString().replace('T', '-').replace(':', 'h', 1).replace(/:.*/, 'm.hbr2');
+            let fname = 'HBReplay-' + (new Date()).toISOString().replace('T', '-').replace(':', 'h', 1).replace(/:.*/, 'm.hbr2');
             let recording = btoa(String.fromCharCode.apply(null, room.stopRecording()));
             let recLink = doc.createElement('a');
             recLink.href = 'data:application/octet-stream;base64,' + recording;
