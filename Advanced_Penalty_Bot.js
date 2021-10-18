@@ -1,6 +1,6 @@
 var Map = `{"name":"Penalty","width":420,"height":200,"spawnDistance":300,"canBeStored":false,"bg":{"type":"grass","width":500,"height":250,"kickOffRadius":10,"cornerRadius":0,"color":"008000"},"vertexes":[{"x":420,"y":600,"trait":"ballArea"},{"x":420,"y":-600,"trait":"ballArea"},{"x":285,"y":500,"trait":"gkArea"},{"x":285,"y":-500,"trait":"gkArea"},{"x":315,"y":500,"trait":"gkArea"},{"x":315,"y":-500,"trait":"gkArea"},{"x":-475,"y":-200,"trait":"penArea"},{"x":-10,"y":-190,"trait":"penArea"},{"x":-10,"y":190,"trait":"penArea"},{"x":-475,"y":200,"trait":"penArea"},{"x":300,"y":-250,"trait":"line"},{"x":300,"y":250,"trait":"line"},{"x":0,"y":9,"trait":"line"},{"x":0,"y":-9,"trait":"line"},{"x":0,"y":9,"trait":"line"},{"x":0,"y":-9,"trait":"line"},{"x":175,"y":-175,"trait":"line"},{"x":300,"y":-175,"trait":"line"},{"x":175,"y":175,"trait":"line"},{"x":300,"y":175,"trait":"line"},{"x":-120,"y":-250,"trait":"line"},{"x":-120,"y":250,"trait":"line"},{"x":-120,"y":-190,"trait":"line"},{"x":-120,"y":190,"trait":"line"},{"x":300,"y":-100,"trait":"line"},{"x":350,"y":-98,"trait":"line"},{"x":350,"y":98,"trait":"line"},{"x":300,"y":100,"trait":"line"},{"x":0,"y":-15,"trait":"powerboost"},{"x":0,"y":15,"trait":"powerboost"},{"x":400,"y":-135,"trait":"line"},{"x":400,"y":135,"trait":"line"},{"x":-120,"y":180,"trait":"timebar_moving_ball_stop"},{"x":-120,"y":120,"trait":"timebar_moving_ball_stop"},{"x":-120,"y":-100,"cMask":["none"],"cGroup":["none"]},{"x":-120,"y":100,"cMask":["none"],"cGroup":["none"]},{"x":-10,"y":-100,"cMask":["none"],"cGroup":["none"]},{"x":-10,"y":100,"cMask":["none"],"cGroup":["none"]}],"segments":[{"v0":0,"v1":1,"trait":"ballArea"},{"v0":2,"v1":3,"trait":"gkArea"},{"v0":4,"v1":5,"trait":"gkArea"},{"v0":6,"v1":7,"trait":"penArea"},{"v0":7,"v1":8,"curve":50,"trait":"penArea"},{"v0":8,"v1":9,"trait":"penArea"},{"v0":9,"v1":6,"trait":"penArea"},{"v0":10,"v1":11,"trait":"line"},{"v0":12,"v1":13,"curve":-180,"trait":"line"},{"v0":14,"v1":15,"curve":180,"trait":"line"},{"v0":16,"v1":17,"trait":"line"},{"v0":16,"v1":18,"trait":"line"},{"v0":18,"v1":19,"trait":"line"},{"v0":20,"v1":21,"trait":"line"},{"v0":22,"v1":23,"curve":-140,"trait":"line"},{"v0":24,"v1":25,"curve":10,"trait":"goalnet"},{"v0":25,"v1":26,"curve":10,"trait":"goalnet"},{"v0":26,"v1":27,"curve":10,"trait":"goalnet"},{"v0":28,"v1":29,"curve":180,"trait":"powerboost"},{"v0":25,"v1":30,"trait":"line"},{"v0":26,"v1":31,"trait":"line"},{"v0":32,"v1":33,"trait":"timebar_moving_ball_stop"},{"v0":34,"v1":35,"trait":"dangerZoneMinX","x":-120},{"v0":36,"v1":37,"trait":"dangerZoneMaxX","x":-10},{"v0":34,"v1":36,"trait":"dangerZoneMinY","y":-100},{"v0":35,"v1":37,"trait":"dangerZoneMaxY","y":100}],"goals":[{"p0":[310,100],"p1":[310,-100],"team":"blue"},{"p0":[300,100],"p1":[-400,100],"team":"red"},{"p0":[300,-100],"p1":[-400,-100],"team":"red"},{"p0":[-10,250],"p1":[-10,-250],"team":"red"}],"discs":[{"pos":[300,100],"trait":"goalPost"},{"pos":[300,-100],"trait":"goalPost"},{"pos":[400,-135],"trait":"stanchion"},{"pos":[400,135],"trait":"stanchion"},{"pos":[-400,-1385],"trait":"arrow"},{"pos":[-340,-1385],"trait":"arrow"},{"pos":[-355,-1400],"trait":"arrow"},{"pos":[-355,-1370],"trait":"arrow"},{"pos":[-120,150],"trait":"timebar_ball_constant"},{"pos":[120,150],"trait":"timebar_ball_constant_2"},{"pos":[120,150],"trait":"timebar_ball_moving","speed":[-0.4,0]},{"pos":[1135,130],"trait":"number_indicator_0"},{"pos":[1160,130],"trait":"number_indicator_0"},{"pos":[1160,170],"trait":"number_indicator_0"},{"pos":[1135,170],"trait":"number_indicator_0"},{"pos":[1135,130],"trait":"number_indicator_1"},{"pos":[1135,170],"trait":"number_indicator_1"},{"pos":[1135,130],"trait":"number_indicator_2"},{"pos":[1160,130],"trait":"number_indicator_2"},{"pos":[1160,150],"trait":"number_indicator_2"},{"pos":[1135,150],"trait":"number_indicator_2"},{"pos":[1135,170],"trait":"number_indicator_2"},{"pos":[1160,170],"trait":"number_indicator_2"},{"pos":[1135,130],"trait":"number_indicator_3"},{"pos":[1160,130],"trait":"number_indicator_3"},{"pos":[1160,170],"trait":"number_indicator_3"},{"pos":[1135,170],"trait":"number_indicator_3"},{"pos":[1135,150],"trait":"number_indicator_3"},{"pos":[1160,150],"trait":"number_indicator_3"},{"pos":[1135,130],"trait":"number_indicator_4"},{"pos":[1160,130],"trait":"number_indicator_4"},{"pos":[1135,150],"trait":"number_indicator_4"},{"pos":[1160,170],"trait":"number_indicator_4"},{"pos":[1160,150],"trait":"number_indicator_4"},{"pos":[1160,130],"trait":"number_indicator_5"},{"pos":[1135,130],"trait":"number_indicator_5"},{"pos":[1135,150],"trait":"number_indicator_5"},{"pos":[1160,150],"trait":"number_indicator_5"},{"pos":[1160,170],"trait":"number_indicator_5"},{"pos":[1135,170],"trait":"number_indicator_5"},{"pos":[1160,130],"trait":"number_indicator_6"},{"pos":[1135,130],"trait":"number_indicator_6"},{"pos":[1135,170],"trait":"number_indicator_6"},{"pos":[1160,170],"trait":"number_indicator_6"},{"pos":[1160,150],"trait":"number_indicator_6"},{"pos":[1135,150],"trait":"number_indicator_6"},{"pos":[1135,130],"trait":"number_indicator_7"},{"pos":[1160,130],"trait":"number_indicator_7"},{"pos":[1160,170],"trait":"number_indicator_7"},{"pos":[1135,130],"trait":"number_indicator_8"},{"pos":[1160,130],"trait":"number_indicator_8"},{"pos":[1160,170],"trait":"number_indicator_8"},{"pos":[1135,170],"trait":"number_indicator_8"},{"pos":[1135,150],"trait":"number_indicator_8"},{"pos":[1160,150],"trait":"number_indicator_8"},{"pos":[1135,130],"trait":"number_indicator_9"},{"pos":[1160,130],"trait":"number_indicator_9"},{"pos":[1160,170],"trait":"number_indicator_9"},{"pos":[1135,170],"trait":"number_indicator_9"},{"pos":[1135,150],"trait":"number_indicator_9"},{"pos":[1160,150],"trait":"number_indicator_9"}],"planes":[{"normal":[0,1],"dist":-200,"trait":"ballArea","_data":{"extremes":{"normal":[0,1],"dist":-200,"canvas_rect":[-710,-1400,1160,600],"a":[-710,-200],"b":[1160,-200]}}},{"normal":[0,-1],"dist":-200,"trait":"ballArea","_data":{"extremes":{"normal":[0,-1],"dist":-200,"canvas_rect":[-710,-1400,1160,600],"a":[-710,200],"b":[1160,200]}}},{"normal":[0,1],"dist":-250,"bCoef":0.1,"_data":{"extremes":{"normal":[0,1],"dist":-250,"canvas_rect":[-710,-1400,1160,600],"a":[-710,-250],"b":[1160,-250]}}},{"normal":[0,-1],"dist":-250,"bCoef":0.1,"_data":{"extremes":{"normal":[0,-1],"dist":-250,"canvas_rect":[-710,-1400,1160,600],"a":[-710,250],"b":[1160,250]}}},{"normal":[1,0],"dist":-400,"bCoef":0.1,"_data":{"extremes":{"normal":[1,0],"dist":-400,"canvas_rect":[-710,-1400,1160,600],"a":[-400,-1400],"b":[-400,600]}}},{"normal":[-1,0],"dist":-400,"bCoef":0.1,"_data":{"extremes":{"normal":[-1,0],"dist":-400,"canvas_rect":[-710,-1400,1160,600],"a":[400,-1400],"b":[400,600]}}}],"traits":{"ballArea":{"vis":false,"bCoef":1,"cMask":["ball"]},"gkArea":{"vis":false,"bCoef":0,"cMask":["blue"]},"penArea":{"vis":false,"bCoef":0,"cMask":["red"]},"line":{"vis":true,"color":"C7E6BD","cMask":[]},"goalnet":{"vis":true,"bCoef":0.1,"color":"C7E6BD","cMask":["ball","red","blue"]},"powerboost":{"vis":false,"bCoef":-2.4,"cMask":["ball"],"color":"C7E6BD"},"goalPost":{"radius":5,"invMass":0,"bCoef":1.3,"color":"FFFFFF"},"stanchion":{"radius":3,"invMass":0,"bCoef":1,"color":"FFFFFF"},"arrow":{"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"],"radius":0},"timebar_ball_constant":{"bCoef":0,"radius":0,"invMass":0,"damping":0,"cMask":["c1"],"cGroup":["c1"]},"timebar_ball_constant_2":{"bCoef":0,"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"timebar_ball_moving":{"bCoef":0,"radius":0,"invMass":5e-324,"damping":1,"cMask":["c1"],"cGroup":["c1"]},"timebar_moving_ball_stop":{"vis":false,"bCoef":0,"cMask":["c1"],"cGroup":["c1"],"bias":-280},"number_indicator_0":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_1":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_2":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_3":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_4":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_5":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_6":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_7":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_8":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"number_indicator_9":{"radius":0,"invMass":0,"damping":0,"cMask":["none"],"cGroup":["none"]},"dangerZoneMinX":{"vis":false,"cMask":["none"],"cGroup":["none"]},"dangerZoneMaxX":{"vis":false,"cMask":["none"],"cGroup":["none"]},"dangerZoneMinY":{"vis":false,"cMask":["none"],"cGroup":["none"]},"dangerZoneMaxY":{"vis":false,"cMask":["none"],"cGroup":["none"]}},"joints":[{"d0":5,"d1":6,"color":"FF0000"},{"d0":6,"d1":7,"color":"FF0000"},{"d0":6,"d1":8,"color":"FF0000"},{"d0":9,"d1":10,"color":"718C5A"},{"d0":9,"d1":11,"color":"C7E6BD","length":[0,240]},{"d0":12,"d1":13,"color":"FF0000"},{"d0":13,"d1":14,"color":"FF0000"},{"d0":14,"d1":15,"color":"FF0000"},{"d0":12,"d1":15,"color":"FF0000"},{"d0":16,"d1":17,"color":"FF4000"},{"d0":18,"d1":19,"color":"FF8000"},{"d0":19,"d1":20,"color":"FF8000"},{"d0":20,"d1":21,"color":"FF8000"},{"d0":21,"d1":22,"color":"FF8000"},{"d0":22,"d1":23,"color":"FF8000"},{"d0":24,"d1":25,"color":"FFC000"},{"d0":25,"d1":26,"color":"FFC000"},{"d0":26,"d1":27,"color":"FFC000"},{"d0":28,"d1":29,"color":"FFC000"},{"d0":30,"d1":32,"color":"FFFF00"},{"d0":31,"d1":33,"color":"FFFF00"},{"d0":32,"d1":34,"color":"FFFF00"},{"d0":35,"d1":36,"color":"C0FF00"},{"d0":36,"d1":37,"color":"C0FF00"},{"d0":37,"d1":38,"color":"C0FF00"},{"d0":38,"d1":39,"color":"C0FF00"},{"d0":39,"d1":40,"color":"C0FF00"},{"d0":41,"d1":42,"color":"80FF00"},{"d0":42,"d1":43,"color":"80FF00"},{"d0":43,"d1":44,"color":"80FF00"},{"d0":44,"d1":45,"color":"80FF00"},{"d0":45,"d1":46,"color":"80FF00"},{"d0":47,"d1":48,"color":"40FF00"},{"d0":48,"d1":49,"color":"40FF00"},{"d0":50,"d1":51,"color":"00FF00"},{"d0":51,"d1":52,"color":"00FF00"},{"d0":52,"d1":53,"color":"00FF00"},{"d0":50,"d1":53,"color":"00FF00"},{"d0":54,"d1":55,"color":"00FF00"},{"d0":56,"d1":57,"color":"00FF40"},{"d0":57,"d1":58,"color":"00FF40"},{"d0":58,"d1":59,"color":"00FF40"},{"d0":56,"d1":60,"color":"00FF40"},{"d0":60,"d1":61,"color":"00FF40"}],"redSpawnPoints":[],"blueSpawnPoints":[],"cameraFollow":"player","kickOffReset":"full","cameraWidth":1000,"cameraHeight":1000,"maxViewWidth":2000,"ballPhysics":{"radius":10},"playerPhysics":{"radius":15,"damping":0.96,"acceleration":0.1,"invMass":0.5,"bCoef":0.5}}`
 
-var JMap = JSON.parse(Map);
+var JMap = JSON.parse(Map); //This is for reaching out map objects.
 
 let doc = document.getElementsByTagName('iframe')[0].contentDocument;
 
@@ -10,18 +10,24 @@ var noPlayer = true;
 var public = true;
 var maxPlayers = 8; //Varies between 2 and 30. Visit the following link to learn how to make a room for 0 or 1 person: https://github.com/thenorthstar/MineSweeperBot-HaxBall/issues/1
 var token = ""; //haxball/rs/api/getheadlesstoken
-var code = "fam"; //2 or 3 characters code of country.
-var lat = -90; //Varies between -90 and 90.
-var lon = 0; //Varies between -180 and 180.
+var code = "gb"; //2 or 3 characters code of country.
+var lat = 51.487397; //Varies between -90 and 90.
+var lon = -0.0304748; //Varies between -180 and 180.
 
 geo = { "code": code, "lat": lat, "lon": lon }
 var room = HBInit({ roomName: roomName, playerName: playerName, noPlayer: noPlayer, public: public, maxPlayers: maxPlayers, geo, token: token });
 
 var adminLengthLimit = 1;
+
+var badwords = { //Every user will be responsible for the words in their own language.
+    tr: [/[a4@][./]m[./][gkq]+/, /[a4@]hm[a4@][gğk]+/, /[a4@]mc[ıi1][gğk]+/, /[a4@]m[ı1]n+/, /[a4@]m[kq]+/, /[a4@]ngu[t₺]+/, /[a4@]n[a4@][ns$5]+/, /[a4@]nn[e€][s$5][ıi1]+/, /[a4@][bp][t₺][a4@][l1]+/, /[a4@]q+/, /[a4@][t₺][a4@]pu[t₺]+/, /[bß][a4@][bß][a4@]n+/, /[bß][o0]k+/, /d[a4@][l1][l1][a4@]m[a4@]+/, /d[a4@]ng[a4@][l1][a4@][gğkq]+/, /[e€][bß][e€][ns$5]+/, /f[a4@]h[ıi1][sş$5][e€]+/, /g[e€]r[ıi1]z[e€]k[a4@]+/, /g[a4@]v[a4@][t₺]+/, /[cg][oö0][t₺][uü][mn]+/, /[cg][oö0][t₺]v[e€]r[e€]n+/, /h[a4@][s$5][s$5][ıi1]k[t₺][ıi1]r+/, /[ıi1][bp]n[e€]+/, /k[a4@]f[ıi1]r+/, /k[a4@]h[bpß][e€]+/, /k[a4@]n[c¢][ıi1]k/, /k[e€]r[ıi1]z+/, /k[e€]v[a4@][sş$5][e€]+/, /[l1][a4@]vu[gğk]+/, /m[./][gkq]+/, /m[o0]r[o0]n+/, /n[o0]n[o0][sş$5]+/, /[o0][./][cç¢]+/, /[o0][cç¢]+/, /[o0][rvw][o0][sş$5][bpß][ıiou]+/, /p[e€]z[e€]v[e€]n[gkq]+/, /p[ıi1][cçj¢]+/, /pu[sş$5][t₺]+/, /s.g+/, /[s$5][a4@][l1][a4@][gğk]+/, /[sşz$5][ıi1!]k[eıikmt₺1]+/, /[sşz$5]+2+[ikmşy]+/, /[sş$5][e€]r[e€]f[sş$5][ıi1]z+/, /[t₺][a4@][sş$5][a4@]k+/, /[t₺][a4@][sş$5][sş$5][a4@]k+/, /v[a4@][l1][ıi1]d[e€][ns]+/, /[y7][a4@]r[a4@][gğkmq]+/, /[y7][a4@]rr[a4@][gğkmq]+/, /[y7][a4@][uv][sş$5][a4@][gğk]+/, /[y7][o0][sş$5]m[a4@]+/],
+    en: [/[a4@][s$5][s$5]h[o0][l1][e€]+/, /[bß][a4@]rm[iy7]+/, /[bß][a4@][s$5][t₺][a4@]rd+/, /[bß][ıi1][t₺][cç¢]h+/, /[c¢]un[t₺]+/, /f[uü][cç¢]k+/, /[l1]m[a4@][o0]+/, /[l1]mf[a4@][o0]+/, /pu[s5$][s5$][y7]+/, /r[e€][t₺][a4@]rd+/, /[s$5][t₺]fu+/, /wh[o0]r[e€]+/, /w[t₺]f+/]
+};
+
 var ballKick = false;
 var ballTouch = false;
-var betaTestAnnouncement;
-var betaTestAnnouncementInterval = 120000;
+//var betaTestAnnouncement;
+//var betaTestAnnouncementInterval = 120000;
 var championVoteKickTime = 10000;
 var championVoteKickTimeout;
 var clearAllAvatarsTimeout = 5000;
@@ -32,7 +38,7 @@ var dangerZoneMinY = JMap.segments.find(s => s.trait == "dangerZoneMinY").y;
 var dangerZoneMaxY = JMap.segments.find(s => s.trait == "dangerZoneMaxY").y;
 var dangerZoneFinalKickEliminationTimeout = 1;
 
-var discordLink = "https://discord.gg/t6Wvbqk";
+var discordLink = "https://discord.gg/"; //Insert your discord link here.
 var eliminationReasons = { nothing: 0, kickOff: 1, miss: 2, stop: 3, timeout: 4 };
 var enoughPlayers = 4;
 var enoughPlayersToStartMatch = 4;
@@ -44,7 +50,6 @@ var gameStatus = 0;
 var gameTick = 0;
 var gameTickLimit = 600;
 var gameTickTimeout;
-var idlist = [];
 var isRoomSet = false;
 
 var kickTypes = { blacklist: true, bye: false, characterLength: false, characterValidity: false, duplicate: false, penalty: false, profane: true, spam: true, trash: false, voted: true };
@@ -54,7 +59,7 @@ var languages = ["tr", "en"];
 var lastPlayerTouched = "";
 var lastChampion = null;
 
-var locale = languages[0];
+var locale = languages[1];
 var locales = {
     tr: {
         ChampionInfoMessage: "🏆 Şampiyon oldunuz. Tebrikler!",
@@ -142,6 +147,7 @@ var locales = {
         ConnInfoMessage: "Conn: ",
         BlackListRemoveNoAccountsFoundWarningMessage: "⚠️ Auth, conn ya da name özelliklerinden biri ya da birden fazlası doğru değildir. Lütfen tekrar deneyiniz!",
         NoAvailablePlayersFoundWarningMessage: "⚠️ Uygun oyuncu bulunamadı!",
+        ProfaneMessageWarningMessage: ". uyarı! Küfür yasaktır!",
         BetaTestAnnouncementMessage: "⚠️ Botumuz test aşamasındadır. Botumuz ile ilgili öneri ve şikâyetlerinizi " + discordLink + " adresinden sunucumuza gelip bildirebilirsiniz."
     },
     en: {
@@ -230,20 +236,21 @@ var locales = {
         ConnInfoMessage: "Conn: ",
         BlackListRemoveNoAccountsFoundWarningMessage: "⚠️ Auth, conn or name is wrong. Please try again!",
         NoAvailablePlayersFoundWarningMessage: "⚠️ No available players found!",
+        ProfaneMessageWarningMessage: ". warning! Bad word is prohibited!",
         BetaTestAnnouncementMessage: "⚠️ This room is in the beta testing. You can send feedback about our bot through " + discordLink + "."
     }
 };
 
-var messageColors = { kick: 0x8A0303, ban: 0x8A0303, elimination_delay_kickoff: 0xFF8000, elimination_miss: 0x0080FF, elimination_stop: 0x00FF80, elimination_timeout: 0x008080, deny: 0xFF0000, warning: 0xFFFF00, grant: 0x00FF00, info: 0x00FFFF, announcement: 0x8ED2AB, welcome: 0xFFFFFF, goal: 0x80FF00, admin: 0x97FFFF, civil: 0xFFFFFF };
-var messageFonts = { kick: "bold", ban: "bold", elimination_delay_kickoff: "normal", elimination_miss: "bold", elimination_stop: "bold", elimination_timeout: "bold", deny: "bold", warning: "bold", grant: "normal", info: "normal", announcement: "bold", welcome: "italic", goal: "bold", admin: "bold", civil: "normal" };
-var messageSounds = { kick: 0, ban: 0, elimination_delay_kickoff: 1, elimination_miss: 2, elimination_stop: 1, elimination_timeout: 2, deny: 2, warning: 2, grant: 1, info: 1, announcement: 1, welcome: 2, goal: 1, admin: 1, civil: 1 };
+var messageColors = { elimination_delay_kickoff: 0xFF8000, elimination_miss: 0x0080FF, elimination_stop: 0x00FF80, elimination_timeout: 0x008080, deny: 0xFF0000, warning: 0xFFFF00, grant: 0x00FF00, info: 0x00FFFF, announcement: 0x8ED2AB, welcome: 0xFFFFFF, goal: 0x80FF00, admin: 0x99FFFF, civil: 0xFFFFFF };
+var messageFonts = { elimination_delay_kickoff: "normal", elimination_miss: "bold", elimination_stop: "bold", elimination_timeout: "bold", deny: "bold", warning: "bold", grant: "normal", info: "normal", announcement: "bold", welcome: "italic", goal: "bold", admin: "bold", civil: "normal" };
+var messageSounds = { elimination_delay_kickoff: 1, elimination_miss: 2, elimination_stop: 1, elimination_timeout: 2, deny: 2, warning: 2, grant: 1, info: 1, announcement: 1, welcome: 2, goal: 1, admin: 1, civil: 1 };
 var minNameLength = 3;
 var mute_list = [];
 var muteall = false;
 var muteDurationLowerLimit = 1;
 var muteDurationUpperLimit = 10;
 
-var number_indicators_0 = [];
+var number_indicators_0 = []; //Numbers for the discs of the countdown will be pushed in these arrays.
 var number_indicators_1 = [];
 var number_indicators_2 = [];
 var number_indicators_3 = [];
@@ -258,11 +265,12 @@ var passwordLength = 30;
 var penalizeDuration = 300000;
 var playerAcceleration = JMap.playerPhysics.acceleration;
 var playerDamping = JMap.playerPhysics.damping;
-var dangerZoneRequiredSpeedReduceCoefficient = playerDamping;
+var dangerZoneRequiredSpeedReduceCoefficient = playerDamping; //This will be effective for detecting slowdowns.
 var playerKicked = false;
 var playerList = [];
-var playerMaxSpeed = playerAcceleration * playerDamping / (1 - playerDamping); //If damping < 1
+var playerMaxSpeed = playerAcceleration * playerDamping / (1 - playerDamping); //If damping < 1. For more information, please join the developer's server through the following: https://discord.gg/t6Wvbqk
 var prefix = "!";
+var profaneWordCountToBan = 3;
 var radiusBall = JMap.ballPhysics.radius;
 var radiusPlayer = JMap.playerPhysics.radius;
 var ranks = [];
@@ -270,7 +278,6 @@ var slowModeDuration = 5000;
 var slowMode_muted = [];
 var teamsEnumerator = { spec: 0, red: 1, blue: 2 };
 var temp_list = [];
-var tolerance = 0.01;
 var triggerDistance = radiusBall + radiusPlayer;
 var votesRequired;
 maxPlayers % 2 == 0 ? votesRequired = maxPlayers / 2 : votesRequired = Math.ceil(maxPlayers / 2);
@@ -837,8 +844,12 @@ class roomObject {
             }
         }
 
-        this.isProfane = (string) => {
-            return string.match("/^oç$/");
+        this.isProfane = (player) => {
+            for (var i = 0; i < badwords[locale].length; i++) {
+                if (player.name.toLowerCase().match(badwords[locale][i])) {
+                    room.kickPlayer(player.id, locales[locale].ProfaneNameBanMessage, kickTypes.profane);
+                }
+            }
         }
 
         this.isTrashGK = (player) => {
@@ -1308,8 +1319,8 @@ class roomObject {
             var availablePlayers = _roomObject.players().filter(p => p.id != lastChampion.id && p.admin == false && _playerObject.isJoinTimeEnough(p, enoughTime) == true);
 
             if (kickSession == true) {
-                for (var i = 0; i < availablePlayers.length; i++) {
-                    if (player.id == lastChampion.id) {
+                if (player.id == lastChampion.id) {
+                    for (var i = 0; i < availablePlayers.length; i++) {
                         if (parseInt(message) == availablePlayers[i].id) {
                             if (playerList[availablePlayers[i].id - 1].score > 0) {
                                 _playerObject.decreaseScore(availablePlayers[i]);
@@ -1329,17 +1340,17 @@ class roomObject {
                                 return false;
                             }
                         }
-                        else if (parseInt(message) == 0) {
-                            clearTimeout(championVoteKickTimeout);
-                            room.sendAnnouncement(locales[locale].GameEndPlayerNotUsedRightWarningMessage, null, messageColors.warning, messageFonts.warning, messageSounds.warning);
-                            _roomObject.checkEnd();
-                            return false;
-                        }
                     }
-                    else {
-                        room.sendAnnouncement(locales[playerList[player.id - 1].language].DontHaveRightToPenalizeDenyMessage, player.id, messageColors.deny, messageFonts.deny, messageSounds.deny);
+                    if (parseInt(message) == 0) {
+                        clearTimeout(championVoteKickTimeout);
+                        room.sendAnnouncement(locales[locale].GameEndPlayerNotUsedRightWarningMessage, null, messageColors.warning, messageFonts.warning, messageSounds.warning);
+                        _roomObject.checkEnd();
                         return false;
                     }
+                }
+                else {
+                    room.sendAnnouncement(locales[playerList[player.id - 1].language].DontHaveRightToPenalizeDenyMessage, player.id, messageColors.deny, messageFonts.deny, messageSounds.deny);
+                    return false;
                 }
             }
         }
@@ -1562,6 +1573,18 @@ class roomObject {
         this.onPlayerChat = (player, message) => {
             console.log(new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + "." + new Date().getMilliseconds() + " 💬 " + player.name + " [" + player.id + "]: " + message);
 
+            for (var i = 0; i < badwords[playerList[player.id - 1].language].length; i++) {
+                if (message.toLowerCase().match(badwords[playerList[player.id - 1].language][i])) {
+                    _playerObject.increaseBadWordUsage(player);
+                    room.sendAnnouncement(parseInt(playerList[player.id - 1].badWordUsage) + locales[playerList[player.id - 1].language].ProfaneMessageWarningMessage, player.id, messageColors.warning, messageFonts.warning, messageSounds.warning);
+                    if (playerList[player.id - 1].badWordUsage == profaneWordCountToBan) {
+                        room.kickPlayer(player.id, locales[playerList[player.id - 1].language].ProfaneMessageBanMessage, kickTypes.profane);
+                        return false;
+                    }
+                    return false;
+                }
+            }
+
             if (_playerObject.hasSlowMode(playerList[player.id - 1].auth) == true) {
                 room.sendAnnouncement(locales[playerList[player.id - 1].language].SpamWarningMessage, player.id, messageColors.warning, messageFonts.warning, messageSounds.warning);
                 return false;
@@ -1577,14 +1600,6 @@ class roomObject {
             if (_playerObject.isMuted(player) == true) {
                 room.sendAnnouncement(locales[playerList[player.id - 1].language].MutedWarningMessage + " (" + message + ")", player.id, messageColors.warning, messageFonts.warning, messageSounds.warning);
                 _roomObject.justSendToAdmins(player, message);
-                return false;
-            }
-
-            if (_roomObject.isProfane(message)) {
-                _playerObject.increaseBadWordUsage(player);
-                if (playerList[player.id - 1].badWordUsage == 3) {
-                    room.kickPlayer(player.id, locales[playerList[player.id - 1].language].ProfaneMessageBanMessage, kickTypes.profane);
-                }
                 return false;
             }
 
@@ -1657,15 +1672,11 @@ class roomObject {
                 room.kickPlayer(player.id, locales[locale].PlayerStillPenalizedKickMessage, kickTypes.penalty);
             }
 
-            if (_roomObject.isProfane(player.name) == true) {
-                room.kickPlayer(player.id, locales[locale].ProfaneNameBanMessage, kickTypes.profane);
-            }
-
             if (_playerObject.isStartingOrEndingWithBlankCharacter(player.name) == true) {
                 room.kickPlayer(player.id, locales[locale].StartEndBlankCharacterKickMessage, kickTypes.characterValidity);
             }
 
-            /*if (_roomObject.isDuplicatedAuth(player.auth) == true) {
+            if (_roomObject.isDuplicatedAuth(player.auth) == true) {
                 var second = playerList.find(p => playerList[p.id - 1].auth == player.auth).name;
                 room.kickPlayer(player.id, locales[locale].DuplicatedAuthKickMessage + second, kickTypes.duplicate);
             }
@@ -1677,14 +1688,15 @@ class roomObject {
 
             if (_roomObject.isDuplicatedName(player.name) == true) {
                 room.kickPlayer(player.id, locales[locale].DuplicatedNameKickMessage, kickTypes.duplicate);
-            }*/
+            }
 
+            _roomObject.isProfane(player);
             _playerObject._initPlayer(player);
             _playerObject.isBlacklisted(player);
             _roomObject.checkIfEnoughPlayersOnJoin();
 
             room.sendAnnouncement(locales[playerList[player.id - 1].language].WelcomeMessage, player.id, messageColors.welcome, messageFonts.welcome, messageSounds.welcome);
-            _roomObject.betaTestAnnouncement();
+            //_roomObject.betaTestAnnouncement();
             //_roomObject.updateAdmins();
         }
 
@@ -1724,7 +1736,7 @@ class roomObject {
                         kickSession = false;
                         clearTimeout(championVoteKickTimeout);
                         muteall = false;
-                        room.sendAnnouncement(lastChampion.name + locales[locale].GameEndPlayerNotUsedRightWarningMessage, null, 0xFFFF00, "bold", 2);
+                        room.sendAnnouncement(lastChampion.name + locales[locale].GameEndPlayerNotUsedRightWarningMessage, null, messageColors.warning, messageFonts.warning, messageSounds.warning);
                         _roomObject.checkEnd();
                     }
                 }
@@ -1957,4 +1969,4 @@ room.onTeamVictory = _roomObject.onTeamVictory;
 
 _roomObject.loadMap(Map, 14, 14);
 
-betaTestAnnouncement = setInterval(() => { _roomObject.betaTestAnnouncement() }, betaTestAnnouncementInterval);
+//betaTestAnnouncement = setInterval(() => { _roomObject.betaTestAnnouncement() }, betaTestAnnouncementInterval);
