@@ -1403,7 +1403,7 @@ class roomObject {
                                                 }
                                                 _roomObject.voteBan(availablePlayers[i]);
 
-                                                room.sendAnnouncement(locales[playerList[player.id - 1].language].IDVotedSuccessMessage + availablePlayers[i].name + "(" + playerList[availablePlayers[i].id - 1].votesGiven + "/" + votesRequired + ")", player.id, messageColors.grant, messageFonts.grant, messageSounds.grant);
+                                                room.sendAnnouncement(locales[playerList[player.id - 1].language].IDVotedSuccessMessage + availablePlayers[i].name + " (" + playerList[availablePlayers[i].id - 1].votesGiven + "/" + votesRequired + ")", player.id, messageColors.grant, messageFonts.grant, messageSounds.grant);
                                             }
                                         }
                                     }
