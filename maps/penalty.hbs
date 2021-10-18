@@ -1,0 +1,306 @@
+{
+
+	"name" : "Penalty",
+
+	"width" : 420,
+
+	"height" : 200,
+
+	"spawnDistance" : 300,
+
+	"canBeStored" : false,
+
+	"bg" : { "type" : "grass", "width" : 500, "height" : 250, "kickOffRadius" : 10, "cornerRadius" : 0, "color" : "008000" },
+
+	"vertexes" : [
+		/* 0 */ { "x" : 420, "y" : 600, "trait" : "ballArea" },
+		/* 1 */ { "x" : 420, "y" : -600, "trait" : "ballArea" },
+		
+		/* 2 */ { "x" : 285, "y" : 500, "trait" : "gkArea" },
+		/* 3 */ { "x" : 285, "y" : -500, "trait" : "gkArea" },
+		/* 4 */ { "x" : 315, "y" : 500, "trait" : "gkArea" },
+		/* 5 */ { "x" : 315, "y" : -500, "trait" : "gkArea" },
+		
+		/* 6 */ { "x" : -475, "y" : -200, "trait" : "penArea" },
+		/* 7 */ { "x" : -10, "y" : -190, "trait" : "penArea" },
+		/* 8 */ { "x" : -10, "y" : 190, "trait" : "penArea" },
+		/* 9 */ { "x" : -475, "y" : 200, "trait" : "penArea" },
+		
+		/* 10 */ { "x" : 300, "y" : -250, "trait" : "line" },
+		/* 11 */ { "x" : 300, "y" : 250, "trait" : "line" },
+		/* 12 */ { "x" : 0, "y" : 9, "trait" : "line" },
+		/* 13 */ { "x" : 0, "y" : -9, "trait" : "line" },
+		/* 14 */ { "x" : 0, "y" : 9, "trait" : "line" },
+		/* 15 */ { "x" : 0, "y" : -9, "trait" : "line" },
+		/* 16 */ { "x" : 175, "y" : -175, "trait" : "line" },
+		/* 17 */ { "x" : 300, "y" : -175, "trait" : "line" },
+		/* 18 */ { "x" : 175, "y" : 175, "trait" : "line" },
+		/* 19 */ { "x" : 300, "y" : 175, "trait" : "line" },
+		/* 20 */ { "x" : -120, "y" : -250, "trait" : "line" },
+		/* 21 */ { "x" : -120, "y" : 250, "trait" : "line" },
+		/* 22 */ { "x" : -120, "y" : -190, "trait" : "line" },
+		/* 23 */ { "x" : -120, "y" : 190, "trait" : "line" },
+		/* 24 */ { "x" : 300, "y" : -100, "trait" : "line" },
+		/* 25 */ { "x" : 350, "y" : -98, "trait" : "line" },
+		/* 26 */ { "x" : 350, "y" : 98, "trait" : "line" },
+		/* 27 */ { "x" : 300, "y" : 100, "trait" : "line" },
+		
+		/* 28 */ { "x" : 0, "y" : -15, "trait" : "powerboost" },
+		/* 29 */ { "x" : 0, "y" : 15, "trait" : "powerboost" },
+		
+		/* 30 */ { "x" : 400, "y" : -135, "trait" : "line" },
+		/* 31 */ { "x" : 400, "y" : 135, "trait" : "line" },
+		
+		/* 32 */ { "x" : -120, "y" : 180, "trait" : "timebar_moving_ball_stop" },
+		/* 33 */ { "x" : -120, "y" : 120, "trait" : "timebar_moving_ball_stop" },
+		
+		/* 34 */ { "x" : -120, "y" : -100, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		/* 35 */ { "x" : -120, "y" : 100, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		/* 36 */ { "x" : -10, "y" : -100, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		/* 37 */ { "x" : -10, "y" : 100, "cMask" : ["none" ], "cGroup" : ["none" ] }
+
+	],
+
+	"segments" : [
+		{ "v0" : 0, "v1" : 1, "trait" : "ballArea" },
+		
+		{ "v0" : 2, "v1" : 3, "trait" : "gkArea" },
+		{ "v0" : 4, "v1" : 5, "trait" : "gkArea" },
+		
+		{ "v0" : 6, "v1" : 7, "trait" : "penArea" },
+		{ "v0" : 7, "v1" : 8, "curve" : 50, "trait" : "penArea" },
+		{ "v0" : 8, "v1" : 9, "trait" : "penArea" },
+		{ "v0" : 9, "v1" : 6, "trait" : "penArea" },
+		
+		{ "v0" : 10, "v1" : 11, "trait" : "line" },
+		{ "v0" : 12, "v1" : 13, "curve" : -180, "trait" : "line" },
+		{ "v0" : 14, "v1" : 15, "curve" : 180, "trait" : "line" },
+		{ "v0" : 16, "v1" : 17, "trait" : "line" },
+		{ "v0" : 16, "v1" : 18, "trait" : "line" },
+		{ "v0" : 18, "v1" : 19, "trait" : "line" },
+		{ "v0" : 20, "v1" : 21, "trait" : "line" },
+		{ "v0" : 22, "v1" : 23, "curve" : -140, "trait" : "line" },
+		
+		{ "v0" : 24, "v1" : 25, "curve" : 10, "trait" : "goalnet" },
+		{ "v0" : 25, "v1" : 26, "curve" : 10, "trait" : "goalnet" },
+		{ "v0" : 26, "v1" : 27, "curve" : 10, "trait" : "goalnet" },
+		
+		{ "v0" : 28, "v1" : 29, "curve" : 180, "trait" : "powerboost" },
+		
+		{ "v0" : 25, "v1" : 30, "trait" : "line" },
+		{ "v0" : 26, "v1" : 31, "trait" : "line" },
+		
+		{ "v0" : 32, "v1" : 33, "trait" : "timebar_moving_ball_stop" },
+		
+		{ "v0" : 34, "v1" : 35, "trait" : "dangerZoneMinX", "x" : -120 },
+		
+		{ "v0" : 36, "v1" : 37, "trait" : "dangerZoneMaxX", "x" : -10 },
+		
+		{ "v0" : 34, "v1" : 36, "trait" : "dangerZoneMinY", "y" : -100 },
+		
+		{ "v0" : 35, "v1" : 37, "trait" : "dangerZoneMaxY", "y" : 100 }
+
+	],
+
+	"goals" : [
+		{ "p0" : [310,100 ], "p1" : [310,-100 ], "team" : "blue" },
+		{ "p0" : [300,100 ], "p1" : [-400,100 ], "team" : "red" },
+		{ "p0" : [300,-100 ], "p1" : [-400,-100 ], "team" : "red" },
+		{ "p0" : [-10,250 ], "p1" : [-10,-250 ], "team" : "red" }
+
+	],
+
+	"discs" : [
+		{ "pos" : [300,100 ], "trait" : "goalPost" },
+		{ "pos" : [300,-100 ], "trait" : "goalPost" },
+		
+		{ "pos" : [400,-135 ], "trait" : "stanchion" },
+		{ "pos" : [400,135 ], "trait" : "stanchion" },
+		
+		{ "pos" : [-400,-1385 ], "trait" : "arrow" },
+		{ "pos" : [-340,-1385 ], "trait" : "arrow" },
+		{ "pos" : [-355,-1400 ], "trait" : "arrow" },
+		{ "pos" : [-355,-1370 ], "trait" : "arrow" },
+		
+		{ "pos" : [-120,150 ], "trait" : "timebar_ball_constant" },
+		
+		{ "pos" : [120,150 ], "trait" : "timebar_ball_constant_2" },
+		
+		{ "pos" : [120,150 ], "trait" : "timebar_ball_moving", "speed" : [-0.4,0 ] },
+		
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_0" },
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_0" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_0" },
+		{ "pos" : [1135,170 ], "trait" : "number_indicator_0" },
+		
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_1" },
+		{ "pos" : [1135,170 ], "trait" : "number_indicator_1" },
+		
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_2" },
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_2" },
+		{ "pos" : [1160,150 ], "trait" : "number_indicator_2" },
+		{ "pos" : [1135,150 ], "trait" : "number_indicator_2" },
+		{ "pos" : [1135,170 ], "trait" : "number_indicator_2" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_2" },
+		
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_3" },
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_3" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_3" },
+		{ "pos" : [1135,170 ], "trait" : "number_indicator_3" },
+		{ "pos" : [1135,150 ], "trait" : "number_indicator_3" },
+		{ "pos" : [1160,150 ], "trait" : "number_indicator_3" },
+		
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_4" },
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_4" },
+		{ "pos" : [1135,150 ], "trait" : "number_indicator_4" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_4" },
+		{ "pos" : [1160,150 ], "trait" : "number_indicator_4" },
+		
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_5" },
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_5" },
+		{ "pos" : [1135,150 ], "trait" : "number_indicator_5" },
+		{ "pos" : [1160,150 ], "trait" : "number_indicator_5" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_5" },
+		{ "pos" : [1135,170 ], "trait" : "number_indicator_5" },
+		
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_6" },
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_6" },
+		{ "pos" : [1135,170 ], "trait" : "number_indicator_6" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_6" },
+		{ "pos" : [1160,150 ], "trait" : "number_indicator_6" },
+		{ "pos" : [1135,150 ], "trait" : "number_indicator_6" },
+		
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_7" },
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_7" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_7" },
+		
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_8" },
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_8" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_8" },
+		{ "pos" : [1135,170 ], "trait" : "number_indicator_8" },
+		{ "pos" : [1135,150 ], "trait" : "number_indicator_8" },
+		{ "pos" : [1160,150 ], "trait" : "number_indicator_8" },
+		
+		{ "pos" : [1135,130 ], "trait" : "number_indicator_9" },
+		{ "pos" : [1160,130 ], "trait" : "number_indicator_9" },
+		{ "pos" : [1160,170 ], "trait" : "number_indicator_9" },
+		{ "pos" : [1135,170 ], "trait" : "number_indicator_9" },
+		{ "pos" : [1135,150 ], "trait" : "number_indicator_9" },
+		{ "pos" : [1160,150 ], "trait" : "number_indicator_9" }
+
+	],
+
+	"planes" : [
+		{ "normal" : [0,1 ], "dist" : -200, "trait" : "ballArea" },
+		{ "normal" : [0,-1 ], "dist" : -200, "trait" : "ballArea" },
+		
+		{ "normal" : [0,1 ], "dist" : -250, "bCoef" : 0.1 },
+		{ "normal" : [0,-1 ], "dist" : -250, "bCoef" : 0.1 },
+		{ "normal" : [1,0 ], "dist" : -400, "bCoef" : 0.1 },
+		{ "normal" : [-1,0 ], "dist" : -400, "bCoef" : 0.1 }
+
+	],
+
+	"traits" : {
+		"ballArea" : { "vis" : false, "bCoef" : 1, "cMask" : ["ball" ] },
+		"gkArea" : { "vis" : false, "bCoef" : 0, "cMask" : ["blue" ] },
+		"penArea" : { "vis" : false, "bCoef" : 0, "cMask" : ["red" ] },
+		"line" : { "vis" : true, "color" : "C7E6BD", "cMask" : [ ] },
+		"goalnet" : { "vis" : true, "bCoef" : 0.1, "color" : "C7E6BD", "cMask" : ["ball","red","blue" ] },
+		"powerboost" : { "vis" : false, "bCoef" : -2.4, "cMask" : ["ball" ], "color" : "C7E6BD" },
+		"goalPost" : { "radius" : 5, "invMass" : 0, "bCoef" : 1.3, "color" : "FFFFFF" },
+		"stanchion" : { "radius" : 3, "invMass" : 0, "bCoef" : 1, "color" : "FFFFFF" },
+		"arrow" : { "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ], "radius" : 0 },
+		"timebar_ball_constant" : { "bCoef" : 0, "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["c1" ], "cGroup" : ["c1" ] },
+		"timebar_ball_constant_2" : { "bCoef" : 0, "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"timebar_ball_moving" : { "bCoef" : 0, "radius" : 0, "invMass" : 5e-324, "damping" : 1, "cMask" : ["c1" ], "cGroup" : ["c1" ] },
+		"timebar_moving_ball_stop" : { "vis" : false, "bCoef" : 0, "cMask" : ["c1" ], "cGroup" : ["c1" ], "bias" : -280 },
+		"number_indicator_0" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_1" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_2" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_3" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_4" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_5" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_6" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_7" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_8" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"number_indicator_9" : { "radius" : 0, "invMass" : 0, "damping" : 0, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"dangerZoneMinX" : { "vis" : false, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"dangerZoneMaxX" : { "vis" : false, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"dangerZoneMinY" : { "vis" : false, "cMask" : ["none" ], "cGroup" : ["none" ] },
+		"dangerZoneMaxY" : { "vis" : false, "cMask" : ["none" ], "cGroup" : ["none" ] }
+
+	},
+
+	"joints" : [
+		{ "d0" : 5, "d1" : 6, "color" : "FF0000" },
+		{ "d0" : 6, "d1" : 7, "color" : "FF0000" },
+		{ "d0" : 6, "d1" : 8, "color" : "FF0000" },
+		{ "d0" : 9, "d1" : 10, "color" : "718C5A" },
+		{ "d0" : 9, "d1" : 11, "color" : "C7E6BD", "length" : [0,240 ] },
+		{ "d0" : 12, "d1" : 13, "color" : "FF0000" },
+		{ "d0" : 13, "d1" : 14, "color" : "FF0000" },
+		{ "d0" : 14, "d1" : 15, "color" : "FF0000" },
+		{ "d0" : 12, "d1" : 15, "color" : "FF0000" },
+		{ "d0" : 16, "d1" : 17, "color" : "FF4000" },
+		{ "d0" : 18, "d1" : 19, "color" : "FF8000" },
+		{ "d0" : 19, "d1" : 20, "color" : "FF8000" },
+		{ "d0" : 20, "d1" : 21, "color" : "FF8000" },
+		{ "d0" : 21, "d1" : 22, "color" : "FF8000" },
+		{ "d0" : 22, "d1" : 23, "color" : "FF8000" },
+		{ "d0" : 24, "d1" : 25, "color" : "FFC000" },
+		{ "d0" : 25, "d1" : 26, "color" : "FFC000" },
+		{ "d0" : 26, "d1" : 27, "color" : "FFC000" },
+		{ "d0" : 28, "d1" : 29, "color" : "FFC000" },
+		{ "d0" : 30, "d1" : 32, "color" : "FFFF00" },
+		{ "d0" : 31, "d1" : 33, "color" : "FFFF00" },
+		{ "d0" : 32, "d1" : 34, "color" : "FFFF00" },
+		{ "d0" : 35, "d1" : 36, "color" : "C0FF00" },
+		{ "d0" : 36, "d1" : 37, "color" : "C0FF00" },
+		{ "d0" : 37, "d1" : 38, "color" : "C0FF00" },
+		{ "d0" : 38, "d1" : 39, "color" : "C0FF00" },
+		{ "d0" : 39, "d1" : 40, "color" : "C0FF00" },
+		{ "d0" : 41, "d1" : 42, "color" : "80FF00" },
+		{ "d0" : 42, "d1" : 43, "color" : "80FF00" },
+		{ "d0" : 43, "d1" : 44, "color" : "80FF00" },
+		{ "d0" : 44, "d1" : 45, "color" : "80FF00" },
+		{ "d0" : 45, "d1" : 46, "color" : "80FF00" },
+		{ "d0" : 47, "d1" : 48, "color" : "40FF00" },
+		{ "d0" : 48, "d1" : 49, "color" : "40FF00" },
+		{ "d0" : 50, "d1" : 51, "color" : "00FF00" },
+		{ "d0" : 51, "d1" : 52, "color" : "00FF00" },
+		{ "d0" : 52, "d1" : 53, "color" : "00FF00" },
+		{ "d0" : 50, "d1" : 53, "color" : "00FF00" },
+		{ "d0" : 54, "d1" : 55, "color" : "00FF00" },
+		{ "d0" : 56, "d1" : 57, "color" : "00FF40" },
+		{ "d0" : 57, "d1" : 58, "color" : "00FF40" },
+		{ "d0" : 58, "d1" : 59, "color" : "00FF40" },
+		{ "d0" : 56, "d1" : 60, "color" : "00FF40" },
+		{ "d0" : 60, "d1" : 61, "color" : "00FF40" }
+
+	],
+
+	"cameraFollow" : "player",
+
+	"kickOffReset" : "full",
+
+	"cameraWidth" : 1000,
+
+	"cameraHeight" : 1000,
+
+	"maxViewWidth" : 2000,
+
+	"ballPhysics" : {
+		"radius" : 10
+
+	},
+
+	"playerPhysics" : {
+		"radius" : 15,
+		"damping" : 0.96,
+		"acceleration" : 0.1,
+		"invMass" : 0.5,
+		"bCoef" : 0.5
+
+	}
+}
