@@ -1,5 +1,7 @@
 # HaxBall Advanced Penalty Bot
 
+![Discord](https://img.shields.io/discord/536193210096156682?color=blue&label=DEVELOPER%27S%20DISCORD)
+
 Advanced penalty bot is a JavaScript based HaxBall bot which is developed by reverse engineering method as the result of the developer's observations in public penalty rooms. Fundamentally it has a quite simple logic:
 
 * A match is started when there are enough players in the room,
