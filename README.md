@@ -183,7 +183,7 @@ As an advanced room, it is able to understand what players are doing, what going
 
 **`checkIfEnoughPlayers() : void`**: A new game is started if there are enough players. Of course there should not be game which is currently running.
 
-**`checkIfEnoughPlayersOOnJoin() : void`**: A new game is started if there are enough players. Of course there should not be game which is currently running. Is only invoked when a new player joins.
+**`checkIfEnoughPlayersOnJoin() : void`**: A new game is started if there are enough players. Of course there should not be game which is currently running. Is only invoked when a new player joins.
 
 **`clearAllAvatars() : void`**: Players' score will be shown on their avatars after **room.onGameStart**, **room.onPositionReset** event handlers and elimination, this function is invoked a certain time after the above functions were invoked. (3.2)
 
@@ -243,7 +243,7 @@ As an advanced room, it is able to understand what players are doing, what going
 
 **`isPlayerSlowingDown(player : playerObject) : void`**: Checks if the player in the danger zone is slowing down or not. The division of sequential speeds is less than or equal than damping means player is slowing down and player is eliminated. (3.3)
 
-**`isProfane(string : string) : bool`**: Checks if any content in messages of players is profane. If true, the player is warned about bad word usage, three times warning means ban and therefore blacklist.
+**`isProfane(player : playerObject) : void`**: Checks if any content in name of players is profane. If true, player will be banned and therefore, blacklisted.
 
 **`isTrashGK(player : playerObject) : bool`**: Checks if the player is scored at an amount of goals greater than or equal to a certain number. If true, player is kicked and penalized for a certain time (default: 5 minutes).
 
@@ -440,3 +440,5 @@ Of course, we have some warnings to users and players, after completing all the 
 * Also, blacklist function is essentially for 7/24 rooms, rather than temporary rooms. So, you can remove all the related stuff about it if you don't want to use.
 * As we explained before, administration is either moved by inheritance or get by code; or there can be no administration. This is completely up to the user.
 * Please do not ask for any further implementations to the developer. Because these scripts already will be in development, even though it is published. Or if you are looking for new implementations too much, please develop what you want yourself. Because both the developer doesn't must to implement new codes for you and JavaScript is easy to learn.
+* Our bot has a detailed logging system which logs most of the events like chatting, team changes or kick/bans. So you don't must to be in the room as an admin to track the players.
+* Also our bot has a video recording system, so you can track the shootout sessions (after downloading the files on the Headless page).
